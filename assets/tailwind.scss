@@ -5,3 +5,41 @@
 // https://tailwindcss.com/docs/using-with-preprocessors#using-sass-less-or-stylus
 @import './_custom.scss';
 @import './_mixins.scss';
+
+
+@font-face { 
+    font-family: "graphik-regular-web"; 
+    src: url("~/assets/fonts/graphic-regular-web.woff2") 
+    format("woff2"); 
+}
+
+@font-face { 
+    font-family: "graphik-semibold-web"; 
+    src: url("~/assets/fonts/graphik-semibold-web.woff2") 
+    format("woff2"); 
+}
+
+@font-face { 
+    font-family: "graphik-black-web"; 
+    src: url("~/assets/fonts/graphik-black-web.woff2") 
+    format("woff2"); 
+}
+
+@font-face { 
+    font-family: "graphik-bold-web"; 
+    src: url("~/assets/fonts/graphik-bold-web.woff2") 
+    format("woff2"); 
+}
+
+@font-face { 
+    font-family: "ionicon"; 
+    src: url("~/assets/fonts/ionicons.woff") 
+    format("woff2"); 
+}
+
+@font-face { 
+    font-family: "reenie-beanie-regular"; 
+    src: url("~/assets/fonts/reenie-beanie-regular.woff2") 
+    format("woff2"); 
+}
+

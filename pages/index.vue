@@ -18,18 +18,6 @@ const title = "Hello World";
 
 <template>
   <div>
-    <h1 class="text-7xl font-bold text-red-700">Darya</h1>
-    <!-- <HelloWorld :msg="title" class="mb-4" />
-    <div class="text-lg">
-      <nuxt-link to="/todos">Todos</nuxt-link> /
-      <nuxt-link to="/broken">broken link</nuxt-link>
-    </div>
-    <div>
-      <p>fetching some data from /server/api/hello.ts</p>
-      <pre>{{ data }}</pre>
-      <p>
-        you can visit the api endpoint at <a href="/api/hello">/api/hello</a>
-      </p>
-    </div> -->
+    <Hero />
   </div>
 </template>

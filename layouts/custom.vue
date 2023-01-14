@@ -1,8 +1,8 @@
 <template>
   <div>
     <slot name="header">
-      replace this content with
-      <pre>named slot #header</pre>
+      <Header />
+      <BreadCrumbs />
     </slot>
     <slot />
   </div>
