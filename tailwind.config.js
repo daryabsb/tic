@@ -18,7 +18,12 @@ module.exports = {
       ionicons: ["ionicons"],
       "reenie-beanie-regular": ["reenie-beanie-regular"],
     },
-    extend: {},
+    extend: {
+      scale: {
+        "125": "1.25",
+        "175": "1.75",
+      },
+    },
   },
   variants: {
     extend: {},

@@ -19,5 +19,7 @@ const title = "Hello World";
 <template>
   <div>
     <Hero />
+    <Featured />
+    <SectionCards />
   </div>
 </template>

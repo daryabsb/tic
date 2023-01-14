@@ -18,7 +18,7 @@
                                     alt="People working on laptops" /> -->
                                 <!-- <div class="absolute inset-0 bg-indigo-700 mix-blend-multiply" /> -->
                             </div>
-                            <div class="relative py-12 px-6 sm:py-24 lg:py-32 lg:px-8">
+                            <div class="relative py-12 px-6 sm:py-32 lg:py-40 lg:px-8">
                                 <h1 class="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
                                     <span class="block text-white">TIC QUALITY CONTROL</span>
                                     <span class="block text-indigo-200">customer support</span>
