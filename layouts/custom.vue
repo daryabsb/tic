@@ -1,8 +1,8 @@
 <template>
   <div>
     <slot name="header">
-      <Header />
-      <BreadCrumbs />
+      <!-- <Header />
+      <BreadCrumbs /> -->
     </slot>
     <slot />
   </div>

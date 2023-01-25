@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   // mode: "jit",
   purge: [
@@ -22,6 +23,15 @@ module.exports = {
       scale: {
         "125": "1.25",
         "175": "1.75",
+      },
+      animation: {
+        hscroll: "fadeIn 3s linear infinite",
+      },
+      fontFamily: {
+        montserrat: ["Montserrat"],
+      },
+      colors: {
+        blood: "#ae0d00",
       },
     },
   },
