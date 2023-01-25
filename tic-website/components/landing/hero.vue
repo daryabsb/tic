@@ -252,3 +252,98 @@ body {
     }
 }
 </style>
+
+
+it doesn't work, it says window is not defined
+
+I apologize for the confusion, you are correct that using window in a Nuxt.js server-side rendered (SSR) application will cause an error because window is not defined on the server.
+
+In a SSR context, you can use context.app.$refs instead of this.$refs
+
+Copy code
+export default {
+  setup(context) {
+    const elem = context.app.$refs.carousel;
+    const flkty = new Flickity(elem, {
+      // options
+    });
+  }
+}
+Please note that this solution will only work in client-side and will throw an error if you try to run it on the server side.
+
+Another way you can use to avoid this error is by using the mounted() lifecycle hook to initialize Flickity, but you will have to make sure that the component containing the carousel is only rendered on the client side using the ssr: false option in the component's options.
+
+Copy code
+<template>
+  <div class="carousel" ref="carousel">
+    <div class="carousel-cell"></div>
+    <div class="carousel-cell"></div>
+    <div class="carousel-cell"></div>
+  </div>
+</template>
+Copy code
+<script>
+import Flickity from 'flickity'
+export default {
+    ssr: false,
+    mounted() {
+        const elem = this.$refs.carousel;
+        const flkty = new Flickity(elem, {
+            // options
+        });
+    }
+}
+</script>
+This will make sure that the component is only rendered on the client-side and the error will not be thrown.
+
+I hope this helps, and please let me know if you have any other questions.
+
+
+
+
+daryabsb@gmail.com
+in the composition api please 
+Yes, you can use the Composition API to initialize Flickity in a Nuxt.js project. Here's an example of how you can use the ref attribute in your template and the setup() function in your script file to initialize Flickity:
+
+In the template:
+
+Copy code
+<template>
+    <div class="carousel" ref="carousel">
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+    </div>
+</template>
+In the script:
+
+Copy code
+import { ref } from 'vue'
+import Flickity from 'flickity'
+export default {
+  setup() {
+    const carousel = ref(null);
+    const initFlickity = () => {
+      if (!carousel.value) return;
+      const flkty = new Flickity(carousel.value, {
+        // options
+      });
+    }
+    return {
+      carousel,
+      initFlickity
+    }
+  },
+  mounted() {
+    this.initFlickity()
+  }
+}
+You can bind the ref to the component by adding ref="carousel" to the carousel element, and access it through the carousel.value in the setup function.
+
+In the setup function we use mounted() lifecycle hook to initialize the Flickity, this way we make sure that the component is already mounted and the ref element is available.
+
+Please note that this solution will only work in client-side and will throw an error if you try to run it on the server side.
+
+Another way you can use to avoid this error is by using the mounted() lifecycle hook to initialize Flickity, but you will have to make sure that the component containing the carousel is only rendered on the client side using the ssr: false option in the component's options.
+
+I hope this helps, and please let me know if you have any other questions.
