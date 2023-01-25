@@ -131,6 +131,13 @@
   transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
 }
 
+.content-wrapper p,
+a {
+  text-align: unset;
+  font-family: Montserrat;
+  text-transform: none;
+}
+
 .content-title {
   /* font-size: 12vh; */
   line-height: 1.4;

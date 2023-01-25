@@ -13,11 +13,12 @@
             <template #sections>
                 <LandingHero id="section-1" />
                 <LandingAbout id="section-2" />
+                <LandingCategories id="section-4" />
                 <LandingFetures id="section-3" />
-                <LandingCreative id="section-4" />
-                <LandingTeam id="section-5" />
-                <LandingMap id="section-6" />
-                <LandingNewsletter id="section-6" />
+                <LandingCreative id="section-5" />
+                <LandingTeam id="section-6" />
+                <LandingMap id="section-7" />
+                <LandingNewsletter id="section-8" />
             </template>
         </ParalaxParallax>
     </div>

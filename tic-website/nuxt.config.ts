@@ -18,6 +18,10 @@ export default defineNuxtConfig({
     },
   },
   css: ["~/assets/css/main.css"],
+  plugins: [
+    { src: "~/plugins/aos", mode: "client" },
+    { src: "~/plugins/flickity", mode: "client" },
+  ],
   postcss: {
     plugins: {
       tailwindcss: {},

@@ -10,12 +10,38 @@
                     <div class="mx-auto">
                         <div class="relative shadow-xl sm:overflow-hidden sm:rounded-sm">
                             <div class="absolute inset-0">
-                                <video class="min-w-full min-h-full absolute object-cover"
-                                    src="~/assets/img/accenture-red.mp4" type="video/mp4" autoplay muted loop></video>
-                                <!-- <img class="h-full w-full object-cover"
-                                    src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
-                                    alt="People working on laptops" /> -->
-                                <!-- <div class="absolute inset-0 bg-indigo-700 mix-blend-multiply" /> -->
+                                <div class="hero-slider" data-carousel>
+                                    <div class="carousel-cell"
+                                        style="background-image:url(https://68.media.tumblr.com/57836ee52bc9355ad7c5fed5abf91ccc/tumblr_oiboo6MaRS1slhhf0o1_1280.jpg);">
+                                        <div class="overlay"></div>
+                                        <div class="inner">
+                                            <h3 class="subtitle">Slide 1</h3>
+                                            <h2 class="title">Flickity Parallax</h2>
+                                            <a href="https://flickity.metafizzy.co/" target="_blank" class="btn">Tell me
+                                                more</a>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-cell"
+                                        style="background-image:url(https://68.media.tumblr.com/c40636a5a0d4aa39c335c8db40d2144f/tumblr_omc7z7Xv8N1slhhf0o1_1280.jpg);">
+                                        <div class="overlay"></div>
+                                        <div class="inner">
+                                            <h3 class="subtitle">Slide 2</h3>
+                                            <h2 class="title">Flickity Parallax</h2>
+                                            <a href="https://flickity.metafizzy.co/" target="_blank" class="btn">Tell me
+                                                more</a>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-cell"
+                                        style="background-image:url(https://68.media.tumblr.com/3beb13a4167aa8b5c4743eac17bf351c/tumblr_o8nyvtiHfC1slhhf0o1_1280.jpg);">
+                                        <div class="overlay"></div>
+                                        <div class="inner">
+                                            <h3 class="subtitle">Slide 3</h3>
+                                            <h2 class="title">Flickity Parallax</h2>
+                                            <a href="https://flickity.metafizzy.co/" target="_blank" class="btn">Tell me
+                                                more</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="relative py-12 px-6 sm:py-32 lg:py-40 lg:px-8">
                                 <h1 class="text-center text-4xl font-montserrat tracking-tight sm:text-5xl lg:text-6xl">
@@ -41,32 +67,6 @@
                     </div>
                 </div>
 
-                <!-- Logo cloud -->
-                <div class="bg-gray-100">
-                    <div class="mx-auto max-w-7xl py-12 px-6 lg:px-8">
-                        <p class="text-center text-base font-semibold text-gray-500">Trusted by over 5 very average
-                            small businesses</p>
-                        <div class="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-                            <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                                <img class="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                                    alt="Tuple" />
-                            </div>
-                            <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                                <img class="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-                                    alt="Mirage" />
-                            </div>
-                            <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                                <img class="h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                                    alt="StaticKit" />
-                            </div>
-                            <div class="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
-                                <img class="h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                                    alt="Transistor" />
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- More main page content here... -->
@@ -76,6 +76,7 @@
 
 <script setup>
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
+import { app } from '~/plugins/flickity'
 import {
     Bars3Icon,
     ChatBubbleBottomCenterTextIcon,
@@ -117,4 +118,137 @@ const navigation = [
     { name: 'Partners', href: '#' },
     { name: 'Company', href: '#' },
 ]
+
+// FLICKITY
+var options = {
+    accessibility: true,
+    prevNextButtons: true,
+    pageDots: true,
+    setGallerySize: false,
+    arrowShape: {
+        x0: 10,
+        x1: 60,
+        y1: 50,
+        x2: 60,
+        y2: 45,
+        x3: 15
+    }
+};
+onMounted(() => {
+    // var carousel = document.querySelector('[data-carousel]');
+    // var slides = document.getElementsByClassName('carousel-cell');
+    // const elem = this.$el.querySelector('.carousel');
+    // const flkty = new app.Flickity(carousel, options);
+})
 </script>
+
+<style lang="scss">
+$font-family-primary: 'Montserrat', sans-serif;
+$font-family-secondary: 'Roboto Slab', serif;
+
+body {
+    background-color: #000;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, transparentize(#0E1D33, 0.2), transparentize(#0E1D33, 0.8));
+}
+
+.hero-slider {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .carousel-cell {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .inner {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-align: center;
+
+            .subtitle {
+                font-family: $font-family-secondary;
+                font-size: 2.2rem;
+                line-height: 1.2em;
+                font-weight: 200;
+                font-style: italic;
+                letter-spacing: 3px;
+                color: rgba(255, 255, 255, 0.5);
+                margin-bottom: 5px;
+            }
+
+            .title {
+                font-family: $font-family-primary;
+                font-size: 3rem;
+                line-height: 1.2em;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                margin-bottom: 40px;
+            }
+
+            .btn {
+                border: 1px solid #fff;
+                padding: 14px 18px;
+                text-transform: uppercase;
+                font-family: $font-family-primary;
+                font-size: 0.8rem;
+                letter-spacing: 3px;
+                color: #fff;
+                text-decoration: none;
+                transition: all .2s ease;
+
+                &:hover {
+                    background: #fff;
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    .flickity-prev-next-button {
+        width: 80px;
+        height: 80px;
+        background: transparent;
+
+        &:hover {
+            background: transparent;
+        }
+
+        .arrow {
+            fill: white;
+        }
+    }
+
+    .flickity-page-dots {
+        bottom: 30px;
+
+        .dot {
+            width: 30px;
+            height: 4px;
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.5);
+            border: 0 solid white;
+            border-radius: 0;
+
+            &.is-selected {
+                background: #ff0000;
+                border: 0 solid #ff0000;
+            }
+        }
+    }
+}
+</style>

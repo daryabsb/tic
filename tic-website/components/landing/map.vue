@@ -1,6 +1,15 @@
 <template>
     <ParalaxSlide>
-        <div class="map-container w-3/4 mx-auto">
+        <div class="absolute inset-0">
+            <!-- <video class="min-w-full min-h-full absolute object-cover opacity-50" src="/img/earth_spin_hologram.mov"
+                type="video/mp4" autoplay muted loop></video> -->
+            <!-- <div class="w-full h-full block bg-blood opacity-75"></div> -->
+            <!-- <img class="h-full w-full object-cover"
+                                    src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
+                                    alt="People working on laptops" /> -->
+            <!-- <div class="absolute inset-0 bg-indigo-700 mix-blend-multiply" /> -->
+        </div>
+        <div class="map-container w-3/5 mr-24 ml-auto">
             <img src="~/assets/img/map.png">
             <div class="point dubai tippy" title="Dubai"></div>
             <div class="point abudhabi tippy" title="Abu Dhabi"></div>
