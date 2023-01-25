@@ -1,6 +1,6 @@
 
 <template>
-    <!-- <ParalaxSlide> -->
+    <ParalaxSlide>
         <div class="relative overflow-hidden">
             <div class="relative" ref="carousel" style="position: absolute; width: 100%;">
         <HeadlessTransitionRoot :show="true">
@@ -25,7 +25,7 @@
         ></button>
     </div>
 </div>
-<!-- </ParalaxSlide> -->
+</ParalaxSlide>
   </template>
   
   <script>
