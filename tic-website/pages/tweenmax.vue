@@ -3,9 +3,9 @@
         <section ref="slideshow" class="overflow-hidden relative w-full h-screen z-10">
             <div ref="slideShowInner" class="absolute left-0 right-0 w-full h-full">
                 <div ref="slides" class="absolute top-0 left-0 w-full h-full z-10">
-                    <div v-for="(slide, index) in slideData" :key="index" :class="[
+                    <div ref="slide" v-for="(slide, index) in slideData" :key="index" :class="[
                         activeSlide === index
-                            ? 'block' : 'hidden', 'absolute top-0 left-0 w-full h-full z-10 overflow-hidden'
+                            ? 'is-active block' : 'hidden', 'absolute top-0 left-0 w-full h-full z-10 overflow-hidden'
                     ]">
 
                         <div ref="slideContent"
@@ -70,9 +70,9 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { slideshowSwitch, slideshowNext, slideshowPrev } from "../composables/useGsap"
+import { slideshowSwitch, slideshowNext, slideshowPrev,homeSlideshowParallax } from "../composables/useGsap"
 
-const slideshowDuration = 4000
+const slideshowDuration = ref(4000)
 const slideshow = ref(null)
 const activeSlide = ref(0)
 const slides = ref([])
@@ -106,7 +106,17 @@ const slideData = [
 ];
 
 onMounted(() => {
-    console.log(slideshsow.value[0]);
+    // console.log(slideshsow.value);
+
+    // console.log(slides.value.children[0]);
+    // console.log(slideshow.value.children);
+
+    const timeout=setTimeout(function(){
+  slideshowNext(slideshow,slides,false,true);
+},slideshowDuration.value);
+
+  slideshow.value.timeout = timeout;
+
 })
 
 // https://codepen.io/bcarvalho/pen/gWPvJB
