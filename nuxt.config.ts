@@ -20,10 +20,11 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ["~/assets/css/main.css"],
+  css: ["~/assets/css/main.css", "~/assets/css/tweenmax.css"],
   plugins: [{ src: "~/plugins/aos", mode: "client" }],
   srcDir: "./",
   build: {
+    transpile: ["gsap"],
     postcss: {
       postcssOptions: {
         plugins: {

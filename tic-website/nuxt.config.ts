@@ -14,21 +14,27 @@ export default defineNuxtConfig({
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css?family=Montserrat:400,900",
         },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css?family=Montserrat:400,900",
+        },
       ],
     },
   },
-  css: ["~/assets/css/main.css"],
-  plugins: [
-    { src: "~/plugins/aos", mode: "client" },
+  css: [
+    "~/assets/css/main.css",
+    // "~/assets/css/tweenmax.css"
   ],
-  modules: [
-    'nuxt-headlessui'
-],
+  plugins: [{ src: "~/plugins/aos", mode: "client" }],
+  modules: ["nuxt-headlessui"],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  build: {
+    transpile: ["gsap"],
   },
   // modules: ["@fullpage/nuxt-fullpage"],
 });
