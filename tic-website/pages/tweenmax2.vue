@@ -75,11 +75,10 @@ import gsap from "gsap"
 import { TweenMax } from "gsap/TweenMax"
 // import { slideshowSwitch, slideshowNext, slideshowPrev,homeSlideshowParallax } from "../composables/useGsap"
 
-const slideshowDuration = ref(2000)
+const slideshowDuration = ref(4000)
 const slideshow = ref(null)
 const activeSlide = ref(0)
-const slides = ref(null)
-const slide = ref(null)
+const slides = ref([])
 const pagination = ref(null)
 const pages = ref([])
 const wait = ref(false)
@@ -119,34 +118,26 @@ const slideData = [
 //     pages.value.children[activeSlide.value].classList.add('is-active');
 // }
 
-
 onMounted(() => {
-    // REFERENCES
-    /* 
-    // https://codepen.io/bcarvalho/pen/gWPvJB
-    const activeElement = computed(() => Array.from(slide.value).find(child => child.classList[0] === 'is-active'))
-    const activeElementImage = activeElement.value.querySelector('.image-container')
-    const activeElementContent = activeElement.value.querySelector('.slide-content')
-    */
+    // console.log(slideshsow.value);
+
+    // console.log(slides.value.children[0]);
+    // console.log(slideshow.value.children);
+
     timeout.value = setTimeout(function () {
         slideshowNext(slideshow, false, true);
     }, slideshowDuration.value);
-
+    // console.log("pages", pages.value);
+    // pages.value.children[0].classList.add('is-active')
     slideshow.value.timeout = timeout.value;
+
 })
 
+// https://codepen.io/bcarvalho/pen/gWPvJB
 // reference
 
 // slideshow functions
-function indexInParent(node) {
-    var children = node.parentNode.childNodes;
-    var num = 0;
-    for (var i = 0; i < children.length; i++) {
-        if (children[i] == node) return num;
-        if (children[i].nodeType == 1) num++;
-    }
-    return -1;
-}
+
 
 function slideshowPrev(manual, auto) {
     let prevSlide = activeSlide.value - 1;
@@ -156,37 +147,41 @@ function slideshowPrev(manual, auto) {
     slideshowSwitch(prevSlide, auto);
 }
 function slideshowNext(slideshow, previous, auto) {
-    const activeElement = Array.from(slide.value).find(child => child.classList[0] === 'is-active')
-
-    let newSlide = null;
+    // const slides = slideshow.value.querySelectorAll('.slide');
+    activeSlideElement.value = slides.value.children[activeSlide.value];
+    // const newSlide = ref(null);
 
     if (previous) {
-        newSlide = activeElement.previousElementSibling;
-        if (newSlide.length === 0) {
-            newSlide = slide.value.last();
-        }
+        newSlide.value = activeSlideElement.value.previousElementSibling;
+        // if (!newSlide.value) {
+        //     newSlide.value = slides.value.lastElementChild;
+        // }
     } else {
-        newSlide = activeElement.nextElementSibling;
-        if (newSlide.length == 0) newSlide = Array.from(slide.value).filter(".slide").first();
+        newSlide.value = activeSlideElement.value.nextElementSibling;
+        console.log("check active slide", activeSlideElement.value);
+        console.log("check new slide", newSlide.value);
+
+        // if (!newSlide.value) {
+        //     newSlide.value = slides.value.firstElementChild;
+        // }
     }
-    slideshowSwitch(slideshow, indexInParent(newSlide), auto);
+    // console.log('checking active and new');
+    // console.log("old", activeSlideElement.value);
+    // console.log("new", newSlide.value);
+    // slideshowSwitch(slideshow, Array.from(slides).indexOf(newSlide), auto);
+    slideshowSwitch(slideshow, true);
 }
 
-function slideshowSwitch(slideshow, index, auto) {
-    if (slideshow.value.wait) return;
+function slideshowSwitch(slideshow, auto) {
+    if (wait.value) return;
 
     // activeSlide.value = index;
-    const activeElement = Array.from(slide.value).find(child => child.classList[0] === 'is-active')
-    const activeElementImage = activeElement.querySelector('.image-container')
-    const newSlide = Array.from(slide.value)[index]
-    const newSlideImage = newSlide.querySelector('.image-container')
-
-
-    console.log('checking progress');
-
-    console.log("newSlideImage", newSlideImage);
-
-    // WORK IS HERE
+    activeSlideElement.value = slides.value.children[activeSlide.value]
+    const activeSlideImage = activeSlideElement.value.querySelector('.image-container');
+    // const newSlide = slides.value.children[activeSlide.value];
+    const newSlideImage = newSlide.value.querySelector(".image-container");
+    const newSlideContent = newSlide.value.querySelector(".slide-content");
+    const newSlideElements = newSlide.value.querySelectorAll(".caption");
 
     // console.log("Elements exist");
     // console.log("newSlideImage", newSlideImage);
