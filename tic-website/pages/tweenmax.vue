@@ -1,66 +1,64 @@
 <template>
-    <main class="text-center">
-        <section ref="slideshow" :data-transition="transitionType"
-            class="overflow-hidden relative w-full h-screen z-10">
-            <div ref="slideShowInner" class="absolute left-0 right-0 w-full h-full">
-                <div ref="slides" class="absolute top-0 left-0 w-full h-full z-10">
-                    <div ref="slide" v-for="(slide, index) in slideData" :key="index" :class="[
-                        activeSlide === index
-                            ? 'is-active block' : 'hidden', 'absolute top-0 left-0 w-full h-full z-10 overflow-hidden'
-                    ]">
+    <main class="main-content">
+        <section ref="slideshow" class="slideshow">
+            <div ref="slideShowInner" class="slideshow-inner">
+                <div ref="slides" class="slides">
+                    <div v-for="(slide, index) in slideData" :key="index" ref="slide" class="slide">
 
-                        <div ref="slideContent"
-                            class="slide-content absolute top-0 left-0 w-full h-full z-20 text-white bg-zinc-900 bg-opacity-30 text-center flex justify-center items-center font-montserrat">
-                            <div ref="caption" class="caption text-white px-24">
-                                <div ref="title" class="text-6xl leading-normal uppercase font-medium max-w-[1000px]">{{
+                        <div ref="slideContent" class="slide-content">
+                            <div ref="caption" class="caption">
+                                <div ref="title" class="title">{{
                                     slide.title
                                 }}
                                 </div>
-                                <div ref="text" class="text-sm mx-auto max-w-[1000px]">
+                                <div ref="text" class="text">
                                     <p>{{ slide.description }}</p>
                                 </div>
-                                <a ref="btn" href="#" class="btna my-6 mx-4 border border-white">
-                                    <span ref="btnInner" class="font-medium">Learn More</span>
+                                <a ref="btn" href="#" class="btn">
+                                    <span ref="btnInner" class="btn-inner">Learn More</span>
                                 </a>
                             </div>
                         </div>
-                        <div class="image-container absolute top-0 left-0 w-full h-full bg-center z-10">
-                            <img :src="slide.img" alt="" class="absolute top-0 left-0 w-full h-full object-cover" />
+                        <div class="image-container">
+                            <img :src="slide.img" alt="" class="image" />
                         </div>
                     </div>
                 </div>
-                <div ref="pagination"
-                    class="pagination absolute bottom-12 left-0 w-full h-4 cursor-default z-20 flex justify-center">
-                    <div ref="pages" v-for="(slide, index) in slideData" :key="index" :class="[
-                        activeSlide === index
-                            ? ' before:bg-white text-blue-500' : '', 'item mx-1  py-2 px-1 w-16 h-16 cursor-pointer  z-10 caro'
-                    ]">
-                        <button :class="[
-                            activeSlide === index
-                                ? ' bg-opacity-90' : 'bg-opacity-70', 'item bg-white bg-opacity-70  w-16 pb-2'
-                        ]" class="" @click="activeSlide = index"></button>
-                        <!-- <span ref="icon" class="icon text-sm font-medium">{{ index + 1 }}</span> -->
+                <div ref="pagination" class="pagination">
+                    <div ref="pages" class="item is-active">
+                        <span class="icon">1</span>
+                    </div>
+                    <div ref="pages" class="item">
+                        <span class="icon">2</span>
+                    </div>
+                    <div ref="pages" class="item">
+                        <span class="icon">3</span>
+                    </div>
+                    <div ref="pages" class="item">
+                        <span class="icon">4</span>
                     </div>
                 </div>
-                <div ref="arrows" class="absolute top-0 right-0 w-full py-2 pr-4 flex justify-center">
-                    <div class="arrow prev -m-12 p-4 absolute top-96 cursor-pointer left-12 z-30" @click="prevSlide">
+                <div ref="arrows" class="arrows">
+                    <div class="arrow prev">
                         <span class="svg svg-arrow-left">
                             <svg version="1.1" id="svg4-Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                class="relative left-0 w-4 h-6" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#fff"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="26px"
                                 viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve">
                                 <path
                                     d="M13,26c-0.256,0-0.512-0.098-0.707-0.293l-12-12c-0.391-0.391-0.391-1.023,0-1.414l12-12c0.391-0.391,1.023-0.391,1.414,0s0.391,1.023,0,1.414L2.414,13l11.293,11.293c0.391,0.391,0.391,1.023,0,1.414C13.512,25.902,13.256,26,13,26z" />
                             </svg>
+                            <span class="alt sr-only"></span>
                         </span>
                     </div>
-                    <div class="arrow next -m-12 p-4 absolute top-96 cursor-pointer right-12 z-30" @click="nextSlide">
+                    <div class="arrow next">
                         <span class="svg svg-arrow-right">
                             <svg version="1.1" id="svg5-Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                class="relative left-0 w-4 h-6" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#fff"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="26px"
                                 viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve">
                                 <path
                                     d="M1,0c0.256,0,0.512,0.098,0.707,0.293l12,12c0.391,0.391,0.391,1.023,0,1.414l-12,12c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414L11.586,13L0.293,1.707c-0.391-0.391-0.391-1.023,0-1.414C0.488,0.098,0.744,0,1,0z" />
                             </svg>
+                            <span class="alt sr-only"></span>
                         </span>
                     </div>
                 </div>
@@ -77,14 +75,14 @@ import { TweenMax } from "gsap/TweenMax"
 
 const slideshowDuration = ref(2000)
 const slideshow = ref(null)
-const activeSlide = ref(0)
+// const activeSlide = 0
 const slides = ref(null)
-const slide = ref(null)
+// const slide = ref([])
 const pagination = ref(null)
 const pages = ref([])
 const wait = ref(false)
 const timeout = ref(null)
-const transitionType = ref('other')
+const transitionType = ref('fade')
 
 const activeSlideElement = ref(null)
 const newSlide = ref(null)
@@ -112,6 +110,14 @@ const slideData = [
             "https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/11.jpg",
         btn: "Upcoming event",
     },
+    {
+        title: "GSAP SLIDE 004",
+        description: "This is an automatic slideshow",
+        img:
+            "https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/20mars17-sans-typo.jpg",
+        btn: "Upcoming event",
+    },
+
 ];
 
 // function check() {
@@ -120,20 +126,35 @@ const slideData = [
 // }
 
 
-onMounted(() => {
-    // REFERENCES
-    /* 
-    // https://codepen.io/bcarvalho/pen/gWPvJB
-    const activeElement = computed(() => Array.from(slide.value).find(child => child.classList[0] === 'is-active'))
-    const activeElementImage = activeElement.value.querySelector('.image-container')
-    const activeElementContent = activeElement.value.querySelector('.slide-content')
-    */
-    timeout.value = setTimeout(function () {
-        slideshowNext(slideshow, false, true);
-    }, slideshowDuration.value);
+onMounted(async () => {
+    var slide = slideshow.value.querySelectorAll('.slide')
+    slide.forEach(el => el.classList.add('is-loaded'))
+    slide[0].classList.add('is-active')
 
-    slideshow.value.timeout = timeout.value;
-})
+
+
+    var timeout = setTimeout(function () {
+        slideshowNext(slideshow, false, true);
+    }, slideshowDuration);
+
+    slideshow.value.timeout = timeout;
+});
+// REFERENCES
+/* 
+// https://codepen.io/bcarvalho/pen/gWPvJB
+const activeElement = computed(() => Array.from(slide.value).find(child => child.classList[0] === 'is-active'))
+const activeElementImage = activeElement.value.querySelector('.image-container')
+const activeElementContent = activeElement.value.querySelector('.slide-content')
+*/
+
+// Array.from(slide.value)[0].classList.add('is-active')
+
+// timeout.value = setTimeout(function () {
+//     slideshowNext(slideshow, false, true);
+// }, slideshowDuration.value);
+
+
+
 
 // reference
 
@@ -156,102 +177,69 @@ function slideshowPrev(manual, auto) {
     slideshowSwitch(prevSlide, auto);
 }
 function slideshowNext(slideshow, previous, auto) {
-    const activeElement = Array.from(slide.value).find(child => child.classList[0] === 'is-active')
+    var slide = slideshow.value.querySelectorAll('.slide')
+    var activeSlide = slideshow.value.querySelector('.is-active')
 
-    let newSlide = null;
+
+    var newSlide = null;
 
     if (previous) {
-        newSlide = activeElement.previousElementSibling;
+        newSlide = activeSlide.previousElementSibling;
         if (newSlide.length === 0) {
-            newSlide = slide.value.last();
+            newSlide = slide.last();
         }
     } else {
-        newSlide = activeElement.nextElementSibling;
-        if (newSlide.length == 0) newSlide = Array.from(slide.value).filter(".slide").first();
+        newSlide = activeSlide.nextElementSibling;
+        if (!activeSlide.nextElementSibling) newSlide = slide[0];
     }
     slideshowSwitch(slideshow, indexInParent(newSlide), auto);
 }
 
 function slideshowSwitch(slideshow, index, auto) {
-    if (slideshow.value.wait) return;
+    if (wait.value) return;
 
     // activeSlide.value = index;
-    const activeElement = Array.from(slide.value).find(child => child.classList[0] === 'is-active')
-    const activeElementImage = activeElement.querySelector('.image-container')
-    const newSlide = Array.from(slide.value)[index]
+    var slide = slideshow.value.querySelectorAll('.slide')
+    var activeSlide = slideshow.value.querySelector('.is-active')
+    var activeSlideImage = activeSlide.querySelector(".image-container");
+    var newSlide = slide[index];
     const newSlideImage = newSlide.querySelector('.image-container')
+    const newSlideContent = newSlide.querySelector('.slide-content')
+    if (activeSlide == newSlide) return
 
+    newSlide.classList.add("is-new");
 
-    console.log('checking progress');
-
-    console.log("newSlideImage", newSlideImage);
-
-    // WORK IS HERE
-
-    // console.log("Elements exist");
-    // console.log("newSlideImage", newSlideImage);
-    // console.log("newSlideContent", newSlideContent);
-    // console.log("newSlideElements", newSlideElements);
-    // console.log("activeSlideImage", activeSlideImage);
-
-    if (newSlide.value === activeSlideElement.value) return;
-
-    newSlide.value.classList.add("is-new");
 
     clearTimeout(timeout.value);
     wait.value = true;
 
+
+
+    // console.log("newSlideImage", newSlideImage);
     if (transitionType.value == "fade") {
-        newSlide.value.style.display = "block";
-        newSlide.value.style.zIndex = 20;
+        newSlide.style.display = "block";
+        newSlide.style.zIndex = 20;
         newSlideImage.style.opacity = 0;
 
-        gsap.to(newSlideImage, 1, {
+        TweenMax.to(newSlideImage, 1, {
             alpha: 1,
             onComplete: function () {
-                newSlide.value.classList.add("is-active");
-                newSlide.value.classList.remove("is-new");
-                activeSlideElement.value.classList.remove("is-active");
-                activeSlideElement.value.classList.add('is-new');
-                // newSlide.value.style.display = "block";
-                // newSlide.value.style.zIndex = "20";
-                // newSlideImage.style.opacity = "1";
-
-                // check();
-                wait.value = false;
+                newSlide.classList.add("is-active");
+                newSlide.classList.remove("is-new");
+                activeSlide.classList.remove("is-active");
+                newSlide.style.cssText = "display: ''; zIndex: ''";
+                newSlideImage.style.cssText = "opacity: ''";
+                slideshow.value.querySelector(".pagination").dispatchEvent(new Event("check"))
+                wait.value = false
                 if (auto) {
                     timeout.value = setTimeout(function () {
                         slideshowNext(slideshow, false, true);
                     }, slideshowDuration.value);
-                    slideshow.value.timeout = timeout.value;
+
                 }
 
             },
         });
-        // setTimeout(() => {
-        //     newSlide.value.classList.add("is-active");
-        //     newSlide.value.classList.add("block");
-        //     newSlide.value.classList.remove("hidden");
-        //     newSlide.value.classList.remove("is-new");
-        //     activeSlideElement.value.classList.remove("is-active");
-        //     newSlide.value.style.display = "";
-        //     newSlide.value.style.zIndex = "";
-        //     newSlideImage.style.opacity = "";
-        //     pages.value.forEach((page) => {
-        //         page.classList.remove("is-active");
-        //     });
-        //     pages.value[index].classList.add("is-active");
-        //     wait.value = false;
-        //     console.log("reached 2");
-        //     console.log(activeSlideElement.value);
-        //     if (false) return
-        //     if (auto) {
-        //         timeout.value = setTimeout(() => {
-        //             slideshowNext(false, true);
-        //         }, slideshowDuration.value);
-        //     }
-        // }, 1000);
-        // activeSlideElement.value = newSlide.value
     } else {
         const index = Array.from(
             slides.value.children
@@ -299,49 +287,49 @@ function slideshowSwitch(slideshow, index, auto) {
 
         activeSlideImage.style.left = 0;
 
-    }
-    TweenMax.set(newSlideElements, { y: 20, force3D: true });
-    TweenMax.to(activeSlideImage, 1, {
-        left: activeSlideImageLeft,
-        ease: "Power3.easeInOut",
-    });
+        TweenMax.set(newSlideElements, { y: 20, force3D: true });
+        TweenMax.to(activeSlideImage, 1, {
+            left: activeSlideImageLeft,
+            ease: "Power3.easeInOut",
+        });
+        TweenMax.to(newSlide.value, 1, {
+            width: slideshow.value.clientWidth,
+            ease: "Power3.easeInOut",
+        });
 
-    TweenMax.to(newSlide.value, 1, {
-        width: slideshow.value.clientWidth,
-        ease: "Power3.easeInOut",
-    });
-
-    TweenMax.to(newSlideImage, 1, {
-        right: newSlideImageToRight,
-        left: newSlideImageToLeft,
-        ease: "Power3.easeInOut",
-    });
-    console.log("gsap", TweenMax);
-    TweenMax.staggerFromTo(
-        newSlideElements,
-        0.8,
-        { alpha: 0, y: 60 },
-        { alpha: 1, y: 0, ease: "Power3.easeOut", force3D: true, delay: 0.6 },
-        0.1,
-        function () {
-            newSlide.value.classList.add("is-active");
-            newSlide.value.classList.remove("is-new");
-            activeSlideElement.value.classList.remove("is-active");
+        TweenMax.to(newSlideImage, 1, {
+            right: newSlideImageToRight,
+            left: newSlideImageToLeft,
+            ease: "Power3.easeInOut",
+        });
+        console.log("gsap", TweenMax);
+        TweenMax.staggerFromTo(
+            newSlideElements,
+            0.8,
+            { alpha: 0, y: 60 },
+            { alpha: 1, y: 0, ease: "Power3.easeOut", force3D: true, delay: 0.6 },
+            0.1,
+            function () {
+                newSlide.value.classList.add("is-active");
+                newSlide.value.classList.remove("is-new");
+                activeSlideElement.value.classList.remove("is-active");
 
 
 
-            // check()
+                // check()
 
-            wait.value = false;
-            if (auto) {
+                wait.value = false;
+                if (auto) {
 
-                setTimeout(() => {
-                    slideshowNext(slideshow, false, true);
-                }, slideshowDuration.value);
-                slideshow.value.timeout = timeout.value;
+                    setTimeout(() => {
+                        slideshowNext(slideshow, false, true);
+                    }, slideshowDuration.value);
+
+                }
             }
-        }
-    );
+        );
+    }
+
 }
 
 function homeSlideshowParallax() {
@@ -359,57 +347,268 @@ function homeSlideshowParallax() {
 
 </script>
 
-<style lang="scss" scoped>
-.is-loaded {
-    opacity: 1;
+<style lang="scss">
+body {
+    font: 14px/2 "Open sans", sans-serif;
+    letter-spacing: 0.05em;
 }
 
-.image-container:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    background: transparent;
+    border: 1px solid #e1e1e1;
+    font: 12px/1.2 "Oswald", sans-serif;
+    letter-spacing: 0.4em;
+    text-align: center;
+    text-indent: 2px;
+    text-transform: uppercase;
+    transition: color 0.1s linear 0.05s;
 
-.btna::before {
-    background: #fff
-}
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #e1e1e1;
+        z-index: 1;
+        opacity: 0;
+        transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0.2s;
+    }
 
-.pagination {
+    &::after {
+        transition: border 0.1s linear 0.05s;
+    }
 
+    .btn-inner {
+        position: relative;
+        z-index: 2;
+    }
 
-    .item {
-
-        +.page {
-            margin-left: -2px;
-        }
+    &:hover {
+        color: #373737;
+        transition: color 0.1s linear 0s;
 
         &::before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 15px;
-            left: 5px;
-            width: 36px;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.5);
-            transition: background 0.2s ease;
+            top: 0;
+            height: 100%;
+            opacity: 1;
+            transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0s;
         }
 
         &::after {
-            width: 0;
-            background: #fff;
-            z-index: 2;
-            transition: width 0.2s ease;
+            border-color: #373737;
+            transition: border 0.1s linear 0s;
+        }
+    }
+}
+
+.slideshow {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+
+    .slideshow-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slides {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .slide {
+        display: none;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        &.is-active {
+            display: block;
         }
 
-        &:hover::before,
-        &.is-active::before {
-            background-color: #fff;
+        &.is-loaded {
+            opacity: 1;
+        }
+
+        .caption {
+            padding: 0 100px;
+        }
+
+        .image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            z-index: 1;
+            background-size: cover;
+            image-rendering: optimizeQuality;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        .image {
+            width: 100%;
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+
+        &-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            margin: 0 auto 15px;
+            max-width: 1000px;
+            font: 300 50px/1.2 "Oswald", sans-serif;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+        }
+
+        .text {
+            margin: 0 auto;
+            max-width: 1000px;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .btn {
+            margin: 15px 0 0;
+            border-color: #fff;
+
+            &::before {
+                background: #fff
+            }
+        }
+    }
+
+    .pagination {
+        position: absolute;
+        bottom: 35px;
+        left: 0;
+        width: 100%;
+        height: 12px;
+        cursor: default;
+        z-index: 2;
+        text-align: center;
+
+        .item {
+            display: inline-block;
+            padding: 15px 5px;
+            position: relative;
+            width: 46px;
+            height: 32px;
+            cursor: pointer;
+            text-indent: -999em;
+            z-index: 1;
+
+            +.page {
+                margin-left: -2px;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 15px;
+                left: 5px;
+                width: 36px;
+                height: 2px;
+                background: rgba(255, 255, 255, 0.5);
+                transition: background 0.2s ease;
+            }
+
+            &::after {
+                width: 0;
+                background: #fff;
+                z-index: 2;
+                transition: width 0.2s ease;
+            }
+
+            &:hover::before,
+            &.is-active::before {
+                background-color: #fff;
+            }
+        }
+    }
+
+    .arrows {
+        .arrow {
+            margin: -33px 0 0;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .prev {
+            left: 30px;
+
+            &:hover .svg {
+                left: -10px;
+            }
+        }
+
+        .next {
+            right: 30px;
+
+            &:hover .svg {
+                left: 10px;
+            }
+        }
+
+        .svg {
+            position: relative;
+            left: 0;
+            width: 14px;
+            height: 26px;
+            fill: #fff;
+            transition: left 0.2s ease;
         }
     }
 }
