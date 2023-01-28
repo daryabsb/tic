@@ -10,7 +10,7 @@
                     ]">
 
                         <div ref="slideContent"
-                            class="absolute top-0 left-0 w-full h-full z-20 text-white bg-zinc-900 bg-opacity-30 text-center flex justify-center items-center font-montserrat">
+                            class="slide-content absolute top-0 left-0 w-full h-full z-20 text-white bg-zinc-900 bg-opacity-30 text-center flex justify-center items-center font-montserrat">
                             <div ref="caption" class="text-white px-24">
                                 <div ref="title" class="text-6xl leading-normal uppercase font-medium max-w-[1000px]">{{
                                     slide.title
@@ -273,23 +273,37 @@ function slideshowSwitch(slideshow, auto) {
 
         newSlideImage.style.display = "block";
         newSlideImage.style.width = slideshow.value.clientWidth;
-        newSlide.value.style.right = newSlideImageRight;
-        newSlide.value.style.left = newSlideImageLeft;
-        newSlide.value.style.zIndex = 20;
+        newSlideImage.style.right = newSlideImageRight;
+        newSlideImage.style.left = newSlideImageLeft;
+        newSlideImage.style.zIndex = 20;
 
 
 
+        newSlideContent.style.width = slideshow.value.clientWidth;
+        newSlideContent.style.right = newSlideContentRight;
+        newSlideContent.style.left = newSlideContentLeft;
 
-        newSlideContent.css({
-            width: slideshow.width(),
-            left: newSlideContentLeft,
-            right: newSlideContentRight,
-        });
+        activeSlideImage.style.left = 0;
 
-        activeSlideImage.css({
-            left: 0,
-        });
     }
+    gsap.set(newSlideElements, { y: 20, force3D: true });
+    gsap.to(activeSlideImage, 1, {
+        left: activeSlideImageLeft,
+        ease: Power3.easeInOut,
+    });
+
+    TweenMax.to(newSlide, 1, {
+        width: slideshow.width(),
+        ease: Power3.easeInOut,
+    });
+
+    TweenMax.to(newSlideImage, 1, {
+        right: newSlideImageToRight,
+        left: newSlideImageToLeft,
+        ease: Power3.easeInOut,
+    });
+    console.log("reached end of function");
+    activeSlideElement.value = newSlide.value
 }
 
 function homeSlideshowParallax() {
