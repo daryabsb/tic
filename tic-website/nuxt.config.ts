@@ -14,15 +14,12 @@ export default defineNuxtConfig({
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css?family=Montserrat:400,900",
         },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css?family=Montserrat:400,900",
-        },
       ],
     },
   },
   css: [
     "~/assets/css/main.css",
+    "~/assets/css/style.scss",
     // "~/assets/css/tweenmax.css"
   ],
   plugins: [{ src: "~/plugins/aos", mode: "client" }],

@@ -207,7 +207,7 @@ $(document).ready(function () {
     pages.eq(index).addClass("is-active");
   });
 
-  /* Lazyloading */
+  /* Lazyloading
 $('.slideshow').each(function(){
   var slideshow=$(this);
   var images=slideshow.find('.image').not('.is-loaded');
@@ -216,6 +216,7 @@ $('.slideshow').each(function(){
     var slide=image.closest('.slide');
     slide.addClass('is-loaded');
   });
+*/
 
   var timeout = setTimeout(function () {
     slideshowNext(slideshow, false, true);
