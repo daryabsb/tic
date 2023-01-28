@@ -11,7 +11,7 @@
 
                         <div ref="slideContent"
                             class="slide-content absolute top-0 left-0 w-full h-full z-20 text-white bg-zinc-900 bg-opacity-30 text-center flex justify-center items-center font-montserrat">
-                            <div ref="caption" class="text-white px-24">
+                            <div ref="caption" class="caption text-white px-24">
                                 <div ref="title" class="text-6xl leading-normal uppercase font-medium max-w-[1000px]">{{
                                     slide.title
                                 }}
@@ -157,14 +157,16 @@ function slideshowNext(slideshow, previous, auto) {
         // }
     } else {
         newSlide.value = activeSlideElement.value.nextElementSibling;
+        console.log("check active slide", activeSlideElement.value);
+        console.log("check new slide", newSlide.value);
+
         // if (!newSlide.value) {
         //     newSlide.value = slides.value.firstElementChild;
-        //     console.log("error here", newSlide.value);
         // }
     }
-    console.log('checking active and new');
-    console.log("old", activeSlideElement.value);
-    console.log("new", newSlide.value);
+    // console.log('checking active and new');
+    // console.log("old", activeSlideElement.value);
+    // console.log("new", newSlide.value);
     // slideshowSwitch(slideshow, Array.from(slides).indexOf(newSlide), auto);
     slideshowSwitch(slideshow, true);
 }
@@ -174,11 +176,17 @@ function slideshowSwitch(slideshow, auto) {
 
     // activeSlide.value = index;
     activeSlideElement.value = slides.value.children[activeSlide.value]
-    const activeSlideImage = newSlide.value.querySelector('.image-container');
+    const activeSlideImage = activeSlideElement.value.querySelector('.image-container');
     // const newSlide = slides.value.children[activeSlide.value];
     const newSlideImage = newSlide.value.querySelector(".image-container");
     const newSlideContent = newSlide.value.querySelector(".slide-content");
-    const newSlideElements = newSlide.value.querySelectorAll(".caption > *");
+    const newSlideElements = newSlide.value.querySelectorAll(".caption");
+
+    // console.log("Elements exist");
+    // console.log("newSlideImage", newSlideImage);
+    // console.log("newSlideContent", newSlideContent);
+    // console.log("newSlideElements", newSlideElements);
+    // console.log("activeSlideImage", activeSlideImage);
 
     if (newSlide.value === activeSlideElement.value) return;
 
@@ -242,7 +250,7 @@ function slideshowSwitch(slideshow, auto) {
         const index = Array.from(
             slides.value.children
         ).indexOf(newSlide.value);
-        console.log('index', index > activeSlide.value);
+        // console.log('index', index > activeSlide.value);
         if (index > activeSlide.value) {
             var newSlideRight = 0;
             var newSlideLeft = "auto";
@@ -289,21 +297,60 @@ function slideshowSwitch(slideshow, auto) {
     gsap.set(newSlideElements, { y: 20, force3D: true });
     gsap.to(activeSlideImage, 1, {
         left: activeSlideImageLeft,
-        ease: Power3.easeInOut,
+        ease: "Power3.easeInOut",
     });
 
-    TweenMax.to(newSlide, 1, {
-        width: slideshow.width(),
-        ease: Power3.easeInOut,
+    gsap.to(newSlide.value, 1, {
+        width: slideshow.value.clientWidth,
+        ease: "Power3.easeInOut",
     });
 
-    TweenMax.to(newSlideImage, 1, {
+    gsap.to(newSlideImage, 1, {
         right: newSlideImageToRight,
         left: newSlideImageToLeft,
-        ease: Power3.easeInOut,
+        ease: "Power3.easeInOut",
     });
-    console.log("reached end of function");
-    activeSlideElement.value = newSlide.value
+    console.log("auto1", auto);
+    gsap.to(newSlideElements, 1, {
+        alpha: 1,
+        onComplete: function () {
+            console.log("auto2", auto);
+            newSlide.value.classList.add("is-active");
+            newSlide.value.classList.remove("is-new");
+            activeSlideElement.value.classList.remove("is-active");
+            newSlide.value.style.display = "";
+            newSlide.value.style.width = "";
+            newSlide.value.style.right = "";
+            newSlide.value.style.left = "";
+            newSlide.value.style.zIndex = "";
+
+            newSlideImage.style.width = "";
+            newSlideImage.style.right = "";
+            newSlideImage.style.left = "";
+
+
+            newSlideContent.style.width = "";
+            newSlideContent.style.left = "";
+
+            newSlideElements.style.opacity = "";
+            newSlideElements.style.transform = "";
+
+            activeSlideImage.style.left = "";
+        },
+    });
+
+    wait.value = false;
+    if (activeSlide.value < slideData.length) {
+        activeSlide.value++
+
+    } else activeSlide.value = 0
+    console.log("auto", auto);
+    if (auto) {
+        timeout.value = setTimeout(() => {
+            slideshowNext(slideshow, false, true);
+        }, slideshowDuration.value);
+        slideshow.value.timeout = timeout.value;
+    }
 }
 
 function homeSlideshowParallax() {
