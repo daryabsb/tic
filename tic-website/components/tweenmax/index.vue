@@ -1,13 +1,13 @@
 <template>
     <main class="main-content bg-black">
-        <section ref="slideshow" :data-transition="transitionType" class="slideshow">
+        <section ref="slideshow" :data-transition="options.transition" class="slideshow">
             <div ref="slideShowInner" class="slideshow-inner">
                 <div ref="slides" class="slides">
                     <div v-for="(slide, index) in slideData" :key="index" ref="slide" class="slide ">
 
                         <div class="slide-content">
                             <div class="caption">
-                                <div class="title">{{
+                                <div class="font-montserrat text-6xl leading-relaxed">{{
                                     slide.title
                                 }}
                                 </div>
@@ -64,12 +64,22 @@
 import { ref, onMounted } from 'vue'
 
 // import { slideshowSwitch, slideshowNext, slideshowPrev,homeSlideshowParallax } from "../composables/useGsap"
-import { slideData, slideshowSwitch, slideshowNext, slideshowPrev, homeSlideshowParallax } from "~/composables/useGsap"
+import { slideshowSwitch, slideshowNext } from "./script"
 
-const slideshowDuration = ref(4000)
+const props = defineProps({
+    slideData: { type: Object, required: true },
+    options: {
+        type: Object, default: {
+            duration: 4000,
+            transition: 'other'
+        }
+    }
+})
+
+
 const slideshow = ref(null)
 
-const transitionType = ref('other')
+
 
 const goToSlide = (index) => {
     console.log(index);
@@ -77,10 +87,10 @@ const goToSlide = (index) => {
 }
 
 function nextSlide() {
-    slideshowNext(slideshow, false, true);
+    slideshowNext(slideshow, false, true, props.options);
 }
 function prevSlide() {
-    slideshowNext(slideshow, true, true);
+    slideshowNext(slideshow, true, true, props.options);
 }
 
 onMounted(async () => {
@@ -89,8 +99,8 @@ onMounted(async () => {
     slide[0].classList.add('is-active')
 
     var timeout = setTimeout(function () {
-        slideshowNext(slideshow, false, true);
-    }, slideshowDuration.value);
+        slideshowNext(slideshow, false, true, props.options);
+    }, props.options.duration);
 
     slideshow.value.dataset.timeout = timeout;
 });
