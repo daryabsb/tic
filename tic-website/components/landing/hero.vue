@@ -5,7 +5,9 @@
 </template>
 
 <script setup>
+import { defineAsyncComponent } from 'vue';
 
+const Tweenmax = defineAsyncComponent(() => import('~/components/tweenmax/index.vue'))
 const slideData = [
     {
         title: "Vehicle COC",

@@ -21,7 +21,7 @@ export function slideshowPrev(manual, auto) {
   slideshowSwitch(prevSlide, auto);
 }
 
-export function slideshowNext(slideshow, previous, auto, options) {
+export function slideshowNext(slideshow, previous, auto) {
   var slide = slideshow.value.querySelectorAll(".slide");
   var activeSlide = slideshow.value.querySelector(".is-active");
 
@@ -36,10 +36,10 @@ export function slideshowNext(slideshow, previous, auto, options) {
     newSlide = activeSlide.nextElementSibling;
     if (!activeSlide.nextElementSibling) newSlide = slide[0];
   }
-  slideshowSwitch(slideshow, indexInParent(newSlide), auto, options);
+  slideshowSwitch(slideshow, indexInParent(newSlide), auto);
 }
 
-export function slideshowSwitch(slideshow, index, auto, options) {
+export function slideshowSwitch(slideshow, index, auto) {
   //   if (slideshow.value.dataset.wait) return;
 
   // activeSlide.value = index;
@@ -82,7 +82,7 @@ export function slideshowSwitch(slideshow, index, auto, options) {
         if (auto) {
           var timeout = setTimeout(function () {
             slideshowNext(slideshow, false, true);
-          }, options.duration);
+          }, slideshowDuration.value);
 
           slideshow.value.dataset.timeout = timeout;
         }
@@ -182,7 +182,7 @@ export function slideshowSwitch(slideshow, index, auto, options) {
         if (auto) {
           timeout = setTimeout(() => {
             slideshowNext(slideshow, false, true);
-          }, options.duration);
+          }, slideshowDuration.value);
           slideshow.value.dataset.timeout = timeout;
         }
       }
