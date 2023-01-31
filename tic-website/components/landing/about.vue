@@ -1,32 +1,29 @@
 <template>
     <ParalaxSlide>
         <div class="relative px-6 lg:px-8">
-            <div class="mx-auto max-w-3xl xl:max-w-6xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+            <div class="mx-auto max-w-3xl xl:max-w-7xl pt-20 pb-32 sm:pt-48 sm:pb-40">
                 <div>
                     <div class="hidden sm:mb-8 sm:flex sm:justify-center">
                         <div
                             class="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-zinc-900/10 hover:ring-zinc-900/20">
-                            <span class="text-gray-600">Announcing our next round of funding.
+                            <span class="text-gray-600 capitalize text-xl">Who is TIC Quality Control?
                                 <a href="#" class="font-semibold text-blood"><span class="absolute inset-0"
                                         aria-hidden="true"></span>Read more <span aria-hidden="true">→</span></a></span>
                         </div>
                     </div>
                     <div>
                         <h1 class="content-title text-4xl leading-1 tracking-tight sm:text-center sm:text-8xl">
-                            Data to enrich your online business
+                            consulting services and quality solutions
                         </h1>
                         <p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
-                            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                            qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                            occaecat fugiat aliqua.
+                            We are dedicated to helping you meet the safety, quality, and ethical standards you demand
+                            throughout your supply chain.
                         </p>
                         <div class="mt-8 flex gap-x-4 justify-center">
                             <a href="#"
-                                class="inline-block rounded-lg bg-blood px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-blood hover:bg-blood hover:ring-blood">Get
-                                started
+                                class="inline-block rounded-lg bg-blood px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-blood hover:bg-blood hover:ring-blood">Industries
                                 <span class="text-indigo-200" aria-hidden="true">→</span></a><a href="#"
-                                class="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20">Live
-                                demo
+                                class="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20">Services
                                 <span class="text-gray-400" aria-hidden="true">→</span></a>
                         </div>
                     </div>

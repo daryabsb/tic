@@ -128,7 +128,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        // background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.5);
       }
     }
 
@@ -138,27 +138,27 @@
       object-fit: cover;
       height: 100%;
       &::before {
-        // $overlay-color: hsla(240, 74%, 45%, 0.3);
-        // $from-color: hsla(44, 29%, 61%, 0.2);
-        // $to-color: hsla(45, 25%, 50%, 0.8);
-        // $white: hsla(0, 100%, 100%, 0.8);
-        // $shadow-color: hsla(40, 1%, 48%, 0.8);
+        $overlay-color: hsla(240, 74%, 45%, 0.3);
+        $from-color: hsla(44, 29%, 61%, 0.2);
+        $to-color: hsla(45, 25%, 50%, 0.8);
+        $white: hsla(0, 100%, 100%, 0.8);
+        $shadow-color: hsla(40, 1%, 48%, 0.8);
 
-        // $gradient-angle: 165deg;
-        // $overlay-gradient: linear-gradient(
-        //   $gradient-angle,
-        //   $from-color,
-        //   $to-color
-        // );
-        // $radial-gradient: radial-gradient(
-        //   ellipse 30vw 20vh at 10% 5%,
-        //   $white,
-        //   transparent
-        // );
-        // background-color: $overlay-color;
-        // background-image: $overlay-gradient, $radial-gradient;
-        // mix-blend-mode: color;
-        // box-shadow: inset 0 0 5vw $shadow-color;
+        $gradient-angle: 165deg;
+        $overlay-gradient: linear-gradient(
+          $gradient-angle,
+          $from-color,
+          $to-color
+        );
+        $radial-gradient: radial-gradient(
+          ellipse 30vw 20vh at 10% 5%,
+          $white,
+          transparent
+        );
+        background-color: $overlay-color;
+        background-image: $overlay-gradient, $radial-gradient;
+        mix-blend-mode: color;
+        box-shadow: inset 0 0 5vw $shadow-color;
       }
     }
 

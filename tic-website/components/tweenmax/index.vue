@@ -32,7 +32,7 @@
                                 </a> -->
                             </div>
                         </div>
-                        <div class="image-container image-overlay">
+                        <div class="image-container">
                             <img :src="slide.img" alt="" class="image " />
                         </div>
                     </div>

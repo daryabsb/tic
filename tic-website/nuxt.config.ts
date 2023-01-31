@@ -20,6 +20,7 @@ export default defineNuxtConfig({
   css: [
     "~/assets/css/main.css",
     "~/assets/css/style.scss",
+    "~/assets/css/header.css",
     // "~/assets/css/tweenmax.css"
   ],
   plugins: [{ src: "~/plugins/aos", mode: "client" }],

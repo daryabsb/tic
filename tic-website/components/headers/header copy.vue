@@ -130,20 +130,13 @@ module.exports = {
 
                 <div class="hidden h-full lg:flex ">
                   <!-- Flyout menus -->
-                  <!-- <div class="container-shit borderYtoX">
-                    <a>HOMES</a>
-                    <a>ARTICLES</a>
-                    <a>PORTFOLIO</a>
-                    <a>ABOUT</a>
-                    <a>CONTACT</a>
-                  </div> -->
-                  <PopoverGroup as="div" class="inset-x-0 bottom-0 px-2 container-shit borderYtoX">
-                    <div class="flex h-full justify-center space-x-6 ">
+                  <PopoverGroup class="inset-x-0 bottom-0 px-4">
+                    <div class="flex h-full justify-center space-x-8">
                       <Popover v-for="category in navigation.categories" :key="category.name" class="flex"
                         v-slot="{ open }">
                         <div class="relative flex">
-                          <PopoverButton as="a"
-                            :class="[open ? 'border-blood text-blood' : ' border-transparent text-zinc-900 hover:text-zinc-600', 'relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out']">
+                          <PopoverButton
+                            :class="[open ? 'border-blood text-blood' : 'border-transparent text-zinc-900 hover:text-zinc-600', 'relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out']">
                             {{ category.name }}</PopoverButton>
                         </div>
 
@@ -151,6 +144,7 @@ module.exports = {
                           enter-to-class="opacity-100" leave-active-class="transition ease-in duration-150"
                           leave-from-class="opacity-100" leave-to-class="opacity-0">
                           <PopoverPanel class="absolute inset-x-0 top-full text-sm text-gray-500">
+                            <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
                             <div class="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
 
                             <div class="relative bg-white">

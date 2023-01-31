@@ -4,25 +4,27 @@
             <div class="px-6 sm:px-8 lg:w-1/2 xl:pr-12">
                 <h1
                     class="text-4xl font-montserrat font-normal tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-                    <span class="block xl:inline">We got you covered</span>
+                    <span class="block xl:inline">the cruicial role of</span>
                     {{ " " }}
-                    <span class="block text-blood xl:inline">with all we've got.</span>
+                    <span class="block text-blood xl:inline">oil and gas</span>
+                    {{ " " }}
+                    <span class="block xl:inline"> sector.</span>
                 </h1>
                 <p class="mx-auto mt-3 max-w-md text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                    lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                    fugiat aliqua.
+                    Maintaining the integrity of Oil and Gas equipment help support safer working practice, and
+                    efficient process flow.
                 </p>
                 <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
                     <div class="rounded-md shadow">
                         <a href="#"
-                            class="flex w-full items-center justify-center rounded-md border border-transparent bg-blood px-8 py-3 text-base font-medium text-white hover:bg-blood md:py-4 md:px-10 md:text-lg">Get
+                            class="flex w-full items-center justify-center rounded-md border border-transparent bg-blood px-8 py-3 text-base font-medium text-white hover:bg-blood md:py-4 md:px-10 md:text-lg">
+                            Get
                             started</a>
                     </div>
                     <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                         <a href="#"
-                            class="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-blood hover:bg-gray-50 md:py-4 md:px-10 md:text-lg">Live
-                            demo</a>
+                            class="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-blood hover:bg-gray-50 md:py-4 md:px-10 md:text-lg">
+                            Services</a>
                     </div>
                 </div>
             </div>

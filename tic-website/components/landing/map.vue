@@ -85,8 +85,8 @@ $primary: #c10000;
     }
 
     .south-africa {
-        top: 67%;
-        left: 54%;
+        top: 76%;
+        left: 51%;
     }
 
     .kenya {
