@@ -7,9 +7,9 @@
                     <!-- <span
                         class="block text-base font-montserrat font-semibold text-gray-500 sm:text-lg lg:text-base xl:text-lg">Coming
                         soon</span> -->
-                    <span class="block xl:inline">Contact</span>
+                    <span class="inline">Contact</span>
                     {{ " " }}
-                    <span class="block text-blood xl:inline"> Us</span>
+                    <span class="text-blood inline"> Us</span>
 
                 </h1>
                 <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
@@ -33,8 +33,15 @@
                         <input type="email" name="email" id="email"
                             class=" pl-2 block w-full  border-gray-300 py-3 text-base placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:flex-1"
                             placeholder="Enter your email" />
-                        <button type="submit"
-                            class="mt-3 w-full border border-transparent bg-zinc-800 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:inline-flex sm:w-auto sm:flex-shrink-0 sm:items-center">
+                        <button type="submit" class=" mt-3  border 
+                            border-transparent 
+                            bg-zinc-800 px-6 py-3 
+                            text-base font-medium 
+                            text-white shadow-sm 
+                            hover:bg-gray-900 focus:outline-none 
+                            focus:ring-2 focus:ring-indigo-500 
+                            focus:ring-offset-2 sm:mt-0 sm:inline-flex 
+                            w-fit sm:flex-shrink-0 sm:items-center">
                             Notify me
                         </button>
                     </form>
