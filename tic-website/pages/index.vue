@@ -21,6 +21,7 @@
                 <LandingNewsletter id="section-8" />
             </template>
         </ParalaxParallax>
+        <HeadersFooter />
     </div>
 </template>
 <script setup>

@@ -17,6 +17,7 @@
   "dependencies": {
     "@fullpage/nuxt-fullpage": "^0.2.3",
     "@heroicons/vue": "^2.0.13",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/line-clamp": "^0.4.2",
     "aos": "^2.3.4",
     "gsap": "^2.1.3",
