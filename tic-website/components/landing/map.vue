@@ -1,61 +1,118 @@
 <template>
     <ParalaxSlide>
-        <div class="absolute inset-0">
-            <!-- <video class="min-w-full min-h-full absolute object-cover opacity-50" src="/img/earth_spin_hologram.mov"
-                type="video/mp4" autoplay muted loop></video> -->
-            <!-- <div class="w-full h-full block bg-blood opacity-75"></div> -->
-            <!-- <img class="h-full w-full object-cover"
-                                    src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
-                                    alt="People working on laptops" /> -->
-            <!-- <div class="absolute inset-0 bg-indigo-700 mix-blend-multiply" /> -->
-        </div>
-        <div class="map-container w-3/5 mr-24 ml-auto">
-            <img src="~/assets/img/map.png">
-            <div class="point dubai tippy" title="Dubai"></div>
-            <div class="point abudhabi tippy" title="Abu Dhabi"></div>
-            <div class="point sulaimani tippy" title="Iraq"></div>
-            <div class="point cairo tippy" title="Egypt"></div>
-            <div class="point delhi tippy" title="India"></div>
-            <div class="point japan tippy" title="Japan"></div>
+        <div class="overflow-hidden bg-white py-12 sm:py-24 h-full w-full">
+            <!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
 
+            <div class="h-full relative bg-white">
+                <div class="absolute inset-0">
+                    <div class="absolute inset-y-0 left-0 w-1/2 bg-gray-50" />
+                </div>
+                <div class="relative mx-auto max-w-7xl lg:grid lg:grid-cols-6">
+                    <div class="bg-zinc-100 py-8 px-8 lg:col-span-2 lg:px-4 lg:py-24 xl:pr-4">
+                        <div class="mx-auto max-w-lg">
+                            <h2
+                                class="text-2xl font-thin tracking-tight font-montserrat text-blood uppercase sm:text-3xl">
+                                Global
+                                representation
+                            </h2>
+                            <p class="mt-3 text-lg leading-6 text-gray-500">Nullam risus blandit ac aliquam justo ipsum.
+                                Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.</p>
+                            <dl class="mt-8 text-base text-gray-500">
+                                <div>
+                                    <dt class="sr-only">Postal address</dt>
+                                    <dd>
+                                        <p>742 Evergreen Terrace</p>
+                                        <p>Springfield, OR 12345</p>
+                                    </dd>
+                                </div>
+                                <div class="mt-6">
+                                    <dt class="sr-only">Phone number</dt>
+                                    <dd class="flex">
+                                        <PhoneIcon class="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                                        <span class="ml-3">+1 (555) 123-4567</span>
+                                    </dd>
+                                </div>
+                                <div class="mt-3">
+                                    <dt class="sr-only">Email</dt>
+                                    <dd class="flex">
+                                        <EnvelopeIcon class="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                                        <span class="ml-3">support@example.com</span>
+                                    </dd>
+                                </div>
+                            </dl>
+                            <p class="mt-6 text-base text-gray-500">
+                                Looking for careers?
+                                {{ ' ' }}
+                                <a href="#" class="font-medium text-gray-700 underline">View all job openings</a>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white py-2 px-2 lg:col-span-4 lg:py-24 lg:px-4 xl:pl-6">
+                        <div class="mx-auto max-w-lg lg:max-w-none">
+                            <div class="map-container pl-0 xl-pl-24 w-full overflow-hidden">
+                                <!-- <img src="~/assets/img/map.png"
+                                    class="object-right object-cover -mb-12 w-[57rem] max-w-none" /> -->
+                                <img src="~/assets/img/map.png" class=" object-cover">
+                                <div class="point dubai tippy pulse" title="Dubai"></div>
+                                <div class="point abudhabi tippy" title="Abu Dhabi"></div>
+                                <div class="point sulaimani tippy" title="Iraq"></div>
+                                <div class="point cairo tippy" title="Egypt"></div>
+                                <div class="point delhi tippy" title="India"></div>
+                                <div class="point japan tippy" title="Japan"></div>
+                                <div class="point south-africa tippy" title="South Africa"></div>
+                                <div class="point kenya tippy" title="Kenya"></div>
+                                <div class="point london tippy" title="United Kingdom"></div>
+                                <div class="point nairobi tippy" title="Nairobi"></div>
+                            </div>
 
-
-            <div class="point south-africa tippy" title="South Africa"></div>
-            <div class="point kenya tippy" title="Kenya"></div>
-            <div class="point london tippy" title="United Kingdom"></div>
-            <div class="point nairobi tippy" title="Nairobi"></div>
-
-
-
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </ParalaxSlide>
-
 </template>
+<script setup>
+import {
+    CloudArrowUpIcon,
+    LockClosedIcon,
+    ServerIcon,
+} from "@heroicons/vue/20/solid";
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/outline";
+const features = [
+    {
+        name: "Push to deploy.",
+        description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+        icon: CloudArrowUpIcon,
+    },
+    {
+        name: "SSL certificates.",
+        description:
+            "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+        icon: LockClosedIcon,
+    },
+];
+</script>
 
 <style lang="scss" scoped>
-html,
-body {
-    height: 100%;
-}
-
-body {
-    background-color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
 $primary: #c10000;
 
 .map-container {
-    padding: 3.2rem .8rem;
     position: relative;
-    display: inline-block;
-
-    img {
-        width: 100%;
-    }
 
     .point {
         cursor: pointer;
@@ -64,7 +121,7 @@ $primary: #c10000;
         height: 1.4rem;
         background-color: $primary;
         border-radius: 50%;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
         will-change: transform, box-shadow;
         transform: translate(-50%, -50%);
         box-shadow: 0 0 0 rgba($primary, 0.4);
@@ -76,8 +133,6 @@ $primary: #c10000;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         }
     }
-
-
 
     .dubai {
         top: 41%;
@@ -109,7 +164,6 @@ $primary: #c10000;
         left: 53%;
     }
 
-
     .cairo {
         top: 40%;
         left: 53%;
@@ -120,8 +174,6 @@ $primary: #c10000;
         left: 58%;
     }
 
-
-
     .delhi {
         top: 45%;
         left: 68%;
@@ -131,8 +183,6 @@ $primary: #c10000;
         top: 34%;
         left: 86%;
     }
-
-
 }
 
 @keyframes pulse {

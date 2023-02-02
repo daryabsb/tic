@@ -8,13 +8,13 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
+    "@headlessui/vue": "^1.7.5",
+    "@heroicons/vue": "2.0.13",
     "@nuxt/kit": "^3.0.0-rc.6",
     "@nuxtjs/tailwindcss": "^6.2.0",
     "autoprefixer": "^10.3.7",
     "nuxt": "3.0.0",
-    "@headlessui/vue": "^1.7.5",
     "nuxt-headlessui": "^1.1.1",
-    "@heroicons/vue": "2.0.13",
     "postcss": "^8.3.9",
     "sass": "^1.43.2",
     "tailwind-config-viewer": "^1.6.2",
@@ -24,6 +24,7 @@
     "node": ">=14.18.1"
   },
   "dependencies": {
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "gsap": "^3.11.4"
   }
 }
