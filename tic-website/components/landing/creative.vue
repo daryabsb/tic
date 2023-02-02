@@ -7,7 +7,7 @@
                 <div class="relative lg:col-span-1">
                     <img class="h-24  mx-auto w-auto" src="~/assets/logo/tic-logo-01.svg" alt="" />
                     <blockquote class=" drop-shadow mt-6 font-semibold text-zinc-900">
-                        <p class="text-xl font-medium sm:text-2xl">This app has completely transformed
+                        <p class="text-xl capitalize font-medium sm:text-2xl">This app has completely transformed
                             how we
                             interact with customers. We've seen record bookings, higher customer satisfaction, and
                             reduced churn.</p>

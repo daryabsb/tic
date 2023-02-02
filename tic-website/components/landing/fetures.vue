@@ -3,7 +3,7 @@
         <div class="mx-auto w-full max-w-7xl pt-16 pb-20 text-left lg:py-48 lg:text-left z-50">
             <div class="px-6 sm:px-8 lg:w-1/2 xl:pr-12">
                 <h1
-                    class="text-4xl font-montserrat font-normal tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
+                    class="text-4xl capitalize font-montserrat font-normal tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
                     <span class="block xl:inline">the cruicial role of</span>
                     {{ " " }}
                     <span class="block text-blood xl:inline">oil and gas</span>

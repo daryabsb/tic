@@ -12,7 +12,7 @@
                         </div>
                     </div>
                     <div>
-                        <h1 class="content-title text-4xl leading-1 tracking-tight sm:text-center sm:text-8xl">
+                        <h1 class="content-title capitalize text-4xl leading-1 tracking-tight sm:text-center sm:text-8xl">
                             consulting services and quality solutions
                         </h1>
                         <p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">

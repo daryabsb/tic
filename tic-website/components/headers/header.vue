@@ -119,12 +119,12 @@ module.exports = {
         <div class="bg-white">
           <div class="">
             <div class="border-b border-gray-200">
-              <div class="flex xl:mx-96 h-16 xl:h-24 items-center justify-between">
+              <div class="flex mx-2 md:mx-4 xl:mx-6 h-20 xl:py-2 items-center justify-between">
                 <!-- Logo (lg+) -->
                 <div class="hidden lg:flex lg:flex-1 lg:items-center">
-                  <a href="#">
+                  <a href="/">
                     <span class="sr-only">Your Company</span>
-                    <img class="h-20 w-auto" src="~/assets/logo/tic-logo-01.svg" alt="" />
+                    <img class="sm:h-16 xl:h-16 w-auto" src="~/assets/logo/tic-logo-01.svg" alt="" />
                   </a>
                 </div>
 
@@ -198,7 +198,7 @@ module.exports = {
                 </div>
 
                 <!-- Logo (lg-) -->
-                <a href="#" class="lg:hidden">
+                <a href="/" class="lg:hidden">
                   <span class="sr-only">Your Company</span>
                   <img src="~/assets/logo/tic-logo-01.svg" alt="" class="h-12 w-auto" />
                 </a>
