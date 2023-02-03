@@ -24,7 +24,7 @@ export default defineNuxtConfig({
     // "~/assets/css/tweenmax.css"
   ],
   plugins: [{ src: "~/plugins/aos", mode: "client" }],
-  modules: ["nuxt-headlessui"],
+  modules: ["nuxt-headlessui", "@nuxt/content"],
   postcss: {
     plugins: {
       tailwindcss: {},

@@ -18,19 +18,19 @@
                         <TabPanel v-for="category in navigation.categories" :key="category.name"
                             class="space-y-12 px-4 py-6">
                             <div class="grid grid-cols-2 gap-x-4 gap-y-10">
-                                <div v-for="(item, idx) in category.featured" :key="item.name"
+                                <div v-for="(item, idx) in category.featured" :key="item.title"
                                     class="group relative shadow-md p-2 rounded-md bg-neutral-50" data-aos="fade-in"
                                     data-aos-ease='ease' data-aos-duration="900" :data-aos-delay='`${300 * idx}`'>
                                     <div
                                         class="h-32 w-full  overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
-                                        <img :src="item.imageSrc" class="h-full w-full object-cover object-center" />
+                                        <img :src="item.image" class="h-full w-full object-cover object-center" />
                                     </div>
                                     <a :href="item.href" class="mt-6 block text-sm font-medium text-blood">
                                         <span class="absolute inset-0 z-10" aria-hidden="true" />
-                                        {{ item.name }}
+                                        {{ item.title }}
                                     </a>
                                     <p aria-hidden="true" class="mt-1 text-sm text-zinc-80000  line-clamp-3">
-                                        {{ item.description }}
+                                        {{ item.text }}
                                     </p>
                                 </div>
                                 <div class="col-span-2 flex justify-start">
@@ -88,30 +88,30 @@ const navigation = {
             name: 'Industries',
             featured: [
                 {
-                    name: 'Vehicle',
+                    title: 'Vehicle',
                     href: '#',
-                    imageSrc: '/img/industry-cars---01.jpg',
-                    description: 'Pre-exports vehicles Inspections & Confirmation of Conformity verification service to ensure shipments conform to local importing standards to be cleared at destination.'
+                    image: '/img/industry-cars---01.jpg',
+                    text: 'Pre-exports vehicles Inspections & Confirmation of Conformity verification service to ensure shipments conform to local importing standards to be cleared at destination.'
                 },
                 {
-                    name: 'Oil and Gas',
+                    title: 'Oil and Gas',
                     href: '#',
-                    imageSrc: '/img/industry-oil---01.jpg',
-                    description: 'We help support highlighting the maintenance equipment, as well as the safety of petroleum refining and extraction operations. '
+                    image: '/img/industry-oil---01.jpg',
+                    text: 'We help support highlighting the maintenance equipment, as well as the safety of petroleum refining and extraction operations. '
 
                 },
                 {
-                    name: 'Food Safety',
+                    title: 'Food Safety',
                     href: '#',
-                    imageSrc: '/img/industry-food---01.jpg',
-                    description: 'TIC provide reliable methods and services to guarantee food safety and better food control throughout the entire food supply chain.'
+                    image: '/img/industry-food---01.jpg',
+                    text: 'TIC provide reliable methods and services to guarantee food safety and better food control throughout the entire food supply chain.'
 
                 },
                 {
-                    name: 'Agriculture',
+                    title: 'Agriculture',
                     href: '#',
-                    imageSrc: '/img/industry-agriculture---01.jpg',
-                    description: 'Our agricultural inspection and testing services help companies be more transparent and comply with contractual obligations'
+                    image: '/img/industry-agriculture---01.jpg',
+                    text: 'Our agricultural inspection and testing services help companies be more transparent and comply with contractual obligations'
 
                 },
             ],
@@ -120,31 +120,31 @@ const navigation = {
             name: 'Services',
             featured: [
                 {
-                    name: 'Non-Destructive Testing – NDT ',
+                    title: 'Non-Destructive Testing – NDT ',
                     href: '#',
-                    imageSrc: '/img/services-ndt-01.jpg',
-                    description: 'Testing that is used to examine and evaluate the properties of materials, structures, and equipment without causing damage or increasing the risk of the integrity of the items being tested. '
+                    image: '/img/services-ndt-01.jpg',
+                    text: 'Testing that is used to examine and evaluate the properties of materials, structures, and equipment without causing damage or increasing the risk of the integrity of the items being tested. '
 
                 },
                 {
-                    name: 'Calibration Services',
+                    title: 'Calibration Services',
                     href: '#',
-                    imageSrc: '/img/services-calibration-01.jpg',
-                    description: 'Pre-exports vehicles Inspections & Confirmation of Conformity verification service to ensure shipments conform to local importing standards to be cleared at destination.'
+                    image: '/img/services-calibration-01.jpg',
+                    text: 'Pre-exports vehicles Inspections & Confirmation of Conformity verification service to ensure shipments conform to local importing standards to be cleared at destination.'
 
                 },
                 {
-                    name: 'Corrosion',
+                    title: 'Corrosion',
                     href: '#',
-                    imageSrc: '/img/services-Corrosion-01.jpg',
-                    description: 'Pre-exports vehicles Inspections & Confirmation of Conformity verification service to ensure shipments conform to local importing standards to be cleared at destination.'
+                    image: '/img/services-Corrosion-01.jpg',
+                    text: 'Pre-exports vehicles Inspections & Confirmation of Conformity verification service to ensure shipments conform to local importing standards to be cleared at destination.'
 
                 },
                 {
-                    name: 'Steel Manufacturing & Fabrication',
+                    title: 'Steel Manufacturing & Fabrication',
                     href: '#',
-                    imageSrc: '/img/services-steel-01.jpg',
-                    description: 'Pre-exports vehicles Inspections & Confirmation of Conformity verification service to ensure shipments conform to local importing standards to be cleared at destination.'
+                    image: '/img/services-steel-01.jpg',
+                    text: 'Pre-exports vehicles Inspections & Confirmation of Conformity verification service to ensure shipments conform to local importing standards to be cleared at destination.'
 
                 },
             ],
@@ -152,7 +152,7 @@ const navigation = {
     ],
     pages: [
         { name: 'industries', href: '/industries' },
-        { name: 'services', href: '/servises' },
+        { name: 'services', href: '/services' },
     ],
 }
 </script>

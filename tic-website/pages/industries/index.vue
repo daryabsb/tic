@@ -1,10 +1,11 @@
 <template>
-    <div class="bg-white">
-        <ParalaxParallax>
-            <template #nav>
-                <HeadersHeader />
-            </template>
-        </ParalaxParallax>
+    <div class="bg-white relative">
+        <div class="fixed z-50 w-full">
+
+
+            <HeadersHeader />
+
+        </div>
 
 
 
@@ -75,82 +76,11 @@
     </div>
 </template>
 <script setup>
+import data from "~/data/db"
 var wpcf7 = { "api": { "root": "https:\/\/golin.com\/wp-json\/", "namespace": "contact-form-7\/v1" } };
+console.log(data);
+const industries = ref(data.industries)
 
-const industries = [
-    {
-        title: 'Vehicle COC',
-        subtitle: '',
-        text: 'Pre-exports vehicles Inspections & Confirmation of Conformity verification service to ensure shipments conform to local importing standards to be cleared at destination.',
-        more: true,
-        apply: false,
-        image: '/img/industries/vehicle.jpg',
-    },
-    {
-        title: 'Oil and Gas',
-        subtitle: '',
-        text: 'We help support highlighting the maintenance equipment, as well as the safety of petroleum refining and extraction operations.',
-        more: true,
-        apply: false,
-        image: '/img/industries/Oil-Gas-001.jpg',
-    },
-    {
-        title: 'Food Safety Testing',
-        subtitle: '',
-        text: 'TIC provide reliable methods and services to guarantee food safety and better food control throughout the entire food supply chain.',
-        more: true,
-        apply: false,
-        image: '/img/industries/food-safety.jpg',
-    },
-    {
-        title: 'Agriculture Inspections & Testing',
-        subtitle: '',
-        text: 'Our agricultural inspection and testing services help companies be more transparent and comply with contractual obligations.',
-        more: true,
-        apply: false,
-        image: '/img/industries/agriculture.webp',
-    },
-    {
-        title: 'Vegetable Oils and Fats Inspection & Testing Services ',
-        subtitle: '',
-        text: 'TIC offer inspection and testing services for all types of vegetable oils, oilseeds, and feed related by-products.',
-        more: true,
-        apply: false,
-        image: '/img/industries/edible-oil.jpg',
-    },
-    {
-        title: 'Grains and Pulses Inspection & Testing Services',
-        subtitle: '',
-        text: 'We deliver a wide range of inspection and testing services covering all types of pulses, grains, lentils, and dry beans.',
-        more: true,
-        apply: false,
-        image: '/img/industries/AGRI_RICE_0.jpg',
-    },
-    {
-        title: 'Fruit and Vegetables Inspection & Testing Services ',
-        subtitle: '',
-        text: 'Our inspection and testing services will help businesses to have better control and track their food supply chain.',
-        more: true,
-        apply: false,
-        image: '/img/industries/QC-Header.webp',
-    },
-    {
-        title: 'Civil Engineering Inspections',
-        subtitle: '',
-        text: 'TIC engineers provide Non-Destructive Testing services and inspections to investigate the integrity of client structure and ensure maintenance.',
-        more: true,
-        apply: false,
-        image: '/img/industries/maxresdefault.jpg',
-    },
-    {
-        title: 'Marine Industry Inspections',
-        subtitle: '',
-        text: 'We offer services to help support the marine industry manage their compliances and regulations. ',
-        more: true,
-        apply: false,
-        image: '/img/industries/Vessel Inspection & Audit Coordination Department.jpg',
-    },
-]
 </script>
 
 <style>

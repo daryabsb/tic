@@ -164,7 +164,7 @@ module.exports = {
                                     </div>
                                     <a :href="item.href" class="mt-4 block font-medium text-gray-900">
                                       <span class="absolute inset-0 z-10" aria-hidden="true" />
-                                      {{ item.name }}
+                                      {{ item.title }}
                                     </a>
                                     <p aria-hidden="true" class="mt-1">Contact now</p>
                                   </div>
@@ -250,32 +250,31 @@ import {
 } from '@heroicons/vue/24/outline'
 import { ChevronDownIcon } from '@heroicons/vue/20/solid'
 
-const currencies = ['CAD', 'USD', 'AUD', 'EUR', 'GBP']
 const navigation = {
   categories: [
     {
       name: 'Our Services',
       featured: [
         {
-          name: 'Brandings',
+          title: 'Brandings',
           href: '#',
           imageSrc: 'https://blog.digimind.com/hubfs/Branding.jpg',
           imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
         },
         {
-          name: 'Event Management',
+          title: 'Event Management',
           href: '#',
           imageSrc: 'https://i.ytimg.com/vi/3rvPyToHEXQ/maxresdefault.jpg',
           imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
         },
         {
-          name: 'Photography',
+          title: 'Photography',
           href: '#',
           imageSrc: 'https://cdn0.hitched.co.uk/vendor/0988/3_2/960/jpeg/993ae6a1-2146-4ef6-b313-e5c2307946fc_4_300988-165330729089427.webp',
           imageAlt: 'Model wearing minimalist watch with black wristband and white watch face.',
         },
         {
-          name: 'Media & Public Relations',
+          title: 'Media & Public Relations',
           href: '#',
           imageSrc: 'https://i.pinimg.com/originals/ab/99/d2/ab99d232ed8008e6640eae565bd57f44.jpg',
           imageAlt: 'Model opening tan leather long wallet with credit card pockets and cash pouch.',
@@ -286,26 +285,26 @@ const navigation = {
       name: 'Works',
       featured: [
         {
-          name: 'Suly Forum',
+          title: 'Suly Forum',
           href: '#',
           imageSrc: 'https://auis.edu.krd/sulaimaniforum/sites/default/files/styles/speaker_profile/public/25528988190_73d388385b_o.jpg?itok=l5fwbphn',
           imageAlt: 'Hats and sweaters on wood shelves next to various colors of t-shirts on hangers.',
         },
         {
-          name: 'Galawezh xan',
+          title: 'Galawezh xan',
           href: '#',
           imageSrc: 'https://www.puknow.com/Photo/Img/19420192FB_IMG_1555665522494.jpg',
           imageAlt: 'Model wearing light heather gray t-shirt.',
         },
         {
-          name: 'Film Festivals',
+          title: 'Film Festivals',
           href: '#',
           imageSrc: 'https://i.pinimg.com/474x/59/eb/2f/59eb2fc3c4569e946c0f6039a066d934.jpg',
           imageAlt:
             'Grey 6-panel baseball hat with black brim, black mountain graphic on front, and light heather gray body.',
         },
         {
-          name: 'Money Laundry',
+          title: 'Money Laundry',
           href: '#',
           imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-04.jpg',
           imageAlt: 'Model putting folded cash into slim card holder olive leather wallet with hand stitching.',
