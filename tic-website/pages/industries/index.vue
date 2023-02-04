@@ -49,15 +49,21 @@
         </header> -->
         <main id="maincontent" role="main" class="mx-auto max-w-2xl py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
             <div class=" border-b border-gray-200 pb-5 sticky mt-3">
-                <h3 class="text-3xl font-montserrat font-thin leading-6 text-blood">Industries</h3>
+                <h3 class="text-3xl font-montserrat font-thin leading-6 text-blood">{{ industries.name }}</h3>
             </div>
             <div class="mt-16 space-y-16">
-                <div v-for="(industry, featureIdx) in industries" :key="featureIdx"
+                <div v-for="(industry, featureIdx) in industries.featured" :key="featureIdx"
                     class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
                     <div :class="[featureIdx % 2 === 0 ? 'lg:col-start-1' : 'lg:col-start-8 xl:col-start-9', 'mt-6 lg:mt-0 lg:row-start-1 lg:col-span-5 xl:col-span-4']"
                         data-aos="slide-up">
                         <h3 class="text-2xl font-medium text-blood">{{ industry.title }}</h3>
                         <p class="mt-2 text-sm text-gray-500">{{ industry.text }}</p>
+                        <div class="mt-10 flex items-center justify-start gap-x-6">
+
+                            <a :href="`/industries/${industry.id}`"
+                                class="text-base font-thin leading-7 text-blood">Learn more
+                                <span aria-hidden="true">→</span></a>
+                        </div>
                     </div>
                     <div
                         :class="[featureIdx % 2 === 0 ? 'lg:col-start-6 xl:col-start-5' : 'lg:col-start-1', 'flex-auto lg:row-start-1 lg:col-span-7 xl:col-span-8']">
@@ -78,8 +84,8 @@
 <script setup>
 import data from "~/data/db"
 var wpcf7 = { "api": { "root": "https:\/\/golin.com\/wp-json\/", "namespace": "contact-form-7\/v1" } };
-console.log(data);
-const industries = ref(data.industries)
+console.log(wpcf7);
+const industries = ref(data.categories[0])
 
 </script>
 
