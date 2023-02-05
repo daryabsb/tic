@@ -20,8 +20,8 @@
                         <p class="mt-2 text-sm text-gray-500">{{ service.text }}</p>
                         <div class="mt-10 flex items-center justify-start gap-x-6">
 
-                            <a :href="`/industries/${service.id}`"
-                                class="text-base font-thin leading-7 text-blood">Learn more
+                            <a :href="`/services/${service.id}`" class="text-base font-thin leading-7 text-blood">Learn
+                                more
                                 <span aria-hidden="true">→</span></a>
                         </div>
                     </div>
@@ -45,8 +45,3 @@ const services = ref(db.categories[1])
 
 </script>
 
-<style>
-/* @import url('https://golin.com/wp-content/themes/golin/style.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css?ver=6.1.1');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.css?ver=6.1.1'); */
-</style>

@@ -54,10 +54,9 @@ module.exports = {
                 <TabPanels as="template">
                   <TabPanel v-for="category in navigation.categories" :key="category.name" class="space-y-12 px-4 py-6">
                     <div class="grid grid-cols-2 gap-x-4 gap-y-10">
-                      <div v-for="item in category.featured" :key="item.name" class="group relative">
+                      <div v-for="item in category.featured.slice(0, 4)" :key="item.name" class="group relative">
                         <div class="h-32 w-full  overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
-                          <img :src="item.imageSrc" :alt="item.imageAlt"
-                            class="h-full w-full object-cover object-center" />
+                          <img :src="item.image" class="h-full w-full object-cover object-center" />
                         </div>
                         <a :href="item.href" class="mt-6 block text-sm font-medium text-gray-900">
                           <span class="absolute inset-0 z-10" aria-hidden="true" />
@@ -137,13 +136,13 @@ module.exports = {
                     <a>ABOUT</a>
                     <a>CONTACT</a>
                   </div> -->
-                  <PopoverGroup as="div" class="inset-x-0 bottom-0 px-2 container-shit borderYtoX">
+                  <PopoverGroup as="div" class="inset-x-0 bottom-0 px-2 ">
                     <div class="flex h-full justify-center space-x-6 ">
                       <Popover v-for="category in navigation.categories" :key="category.name" class="flex"
                         v-slot="{ open }">
                         <div class="relative flex">
-                          <PopoverButton as="a"
-                            :class="[open ? 'border-blood text-blood' : ' border-transparent text-zinc-900 hover:text-zinc-600', 'relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out']">
+                          <PopoverButton
+                            :class="[open ? 'border-blood text-blood' : ' border-transparent text-zinc-900 hover:text-zinc-600', 'relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm focus:outline-none font-medium transition-colors duration-200 ease-out']">
                             {{ category.name }}</PopoverButton>
                         </div>
 
@@ -156,13 +155,14 @@ module.exports = {
                             <div class="relative bg-white">
                               <div class="mx-auto max-w-7xl px-8">
                                 <div class="grid grid-cols-4 gap-y-10 gap-x-8 py-16">
-                                  <div v-for="item in category.featured" :key="item.name" class="group relative">
+                                  <div v-for="item in category.featured.slice(0, 4)" :key="item.name"
+                                    class="group relative">
                                     <div
-                                      class="h-full w-full  overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
-                                      <img :src="item.imageSrc" :alt="item.imageAlt"
-                                        class="h-full w-full object-cover " />
+                                      class="h-32 w-full  overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75 object-cover">
+                                      <img :src="item.image" class="h-full w-full object-cover " />
                                     </div>
-                                    <a :href="item.href" class="mt-4 block font-medium text-gray-900">
+                                    <a :href="`/${category.name.toLocaleLowerCase()}/${item.id}`"
+                                      class="mt-4 block font-medium text-gray-900">
                                       <span class="absolute inset-0 z-10" aria-hidden="true" />
                                       {{ item.title }}
                                     </a>
@@ -249,74 +249,75 @@ import {
   XMarkIcon,
 } from '@heroicons/vue/24/outline'
 import { ChevronDownIcon } from '@heroicons/vue/20/solid'
-
-const navigation = {
-  categories: [
-    {
-      name: 'Our Services',
-      featured: [
-        {
-          title: 'Brandings',
-          href: '#',
-          imageSrc: 'https://blog.digimind.com/hubfs/Branding.jpg',
-          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
-        },
-        {
-          title: 'Event Management',
-          href: '#',
-          imageSrc: 'https://i.ytimg.com/vi/3rvPyToHEXQ/maxresdefault.jpg',
-          imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
-        },
-        {
-          title: 'Photography',
-          href: '#',
-          imageSrc: 'https://cdn0.hitched.co.uk/vendor/0988/3_2/960/jpeg/993ae6a1-2146-4ef6-b313-e5c2307946fc_4_300988-165330729089427.webp',
-          imageAlt: 'Model wearing minimalist watch with black wristband and white watch face.',
-        },
-        {
-          title: 'Media & Public Relations',
-          href: '#',
-          imageSrc: 'https://i.pinimg.com/originals/ab/99/d2/ab99d232ed8008e6640eae565bd57f44.jpg',
-          imageAlt: 'Model opening tan leather long wallet with credit card pockets and cash pouch.',
-        },
-      ],
-    },
-    {
-      name: 'Works',
-      featured: [
-        {
-          title: 'Suly Forum',
-          href: '#',
-          imageSrc: 'https://auis.edu.krd/sulaimaniforum/sites/default/files/styles/speaker_profile/public/25528988190_73d388385b_o.jpg?itok=l5fwbphn',
-          imageAlt: 'Hats and sweaters on wood shelves next to various colors of t-shirts on hangers.',
-        },
-        {
-          title: 'Galawezh xan',
-          href: '#',
-          imageSrc: 'https://www.puknow.com/Photo/Img/19420192FB_IMG_1555665522494.jpg',
-          imageAlt: 'Model wearing light heather gray t-shirt.',
-        },
-        {
-          title: 'Film Festivals',
-          href: '#',
-          imageSrc: 'https://i.pinimg.com/474x/59/eb/2f/59eb2fc3c4569e946c0f6039a066d934.jpg',
-          imageAlt:
-            'Grey 6-panel baseball hat with black brim, black mountain graphic on front, and light heather gray body.',
-        },
-        {
-          title: 'Money Laundry',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-04.jpg',
-          imageAlt: 'Model putting folded cash into slim card holder olive leather wallet with hand stitching.',
-        },
-      ],
-    },
-  ],
-  pages: [
-    { name: 'About', href: '#' },
-    { name: 'Contact', href: '#' },
-  ],
-}
+import navigation from "~/data/db"
+console.log(navigation);
+// const navigation = {
+//   categories: [
+//     {
+//       name: 'Our Services',
+//       featured: [
+//         {
+//           title: 'Brandings',
+//           href: '#',
+//           imageSrc: 'https://blog.digimind.com/hubfs/Branding.jpg',
+//           imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
+//         },
+//         {
+//           title: 'Event Management',
+//           href: '#',
+//           imageSrc: 'https://i.ytimg.com/vi/3rvPyToHEXQ/maxresdefault.jpg',
+//           imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+//         },
+//         {
+//           title: 'Photography',
+//           href: '#',
+//           imageSrc: 'https://cdn0.hitched.co.uk/vendor/0988/3_2/960/jpeg/993ae6a1-2146-4ef6-b313-e5c2307946fc_4_300988-165330729089427.webp',
+//           imageAlt: 'Model wearing minimalist watch with black wristband and white watch face.',
+//         },
+//         {
+//           title: 'Media & Public Relations',
+//           href: '#',
+//           imageSrc: 'https://i.pinimg.com/originals/ab/99/d2/ab99d232ed8008e6640eae565bd57f44.jpg',
+//           imageAlt: 'Model opening tan leather long wallet with credit card pockets and cash pouch.',
+//         },
+//       ],
+//     },
+//     {
+//       name: 'Works',
+//       featured: [
+//         {
+//           title: 'Suly Forum',
+//           href: '#',
+//           imageSrc: 'https://auis.edu.krd/sulaimaniforum/sites/default/files/styles/speaker_profile/public/25528988190_73d388385b_o.jpg?itok=l5fwbphn',
+//           imageAlt: 'Hats and sweaters on wood shelves next to various colors of t-shirts on hangers.',
+//         },
+//         {
+//           title: 'Galawezh xan',
+//           href: '#',
+//           imageSrc: 'https://www.puknow.com/Photo/Img/19420192FB_IMG_1555665522494.jpg',
+//           imageAlt: 'Model wearing light heather gray t-shirt.',
+//         },
+//         {
+//           title: 'Film Festivals',
+//           href: '#',
+//           imageSrc: 'https://i.pinimg.com/474x/59/eb/2f/59eb2fc3c4569e946c0f6039a066d934.jpg',
+//           imageAlt:
+//             'Grey 6-panel baseball hat with black brim, black mountain graphic on front, and light heather gray body.',
+//         },
+//         {
+//           title: 'Money Laundry',
+//           href: '#',
+//           imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-04.jpg',
+//           imageAlt: 'Model putting folded cash into slim card holder olive leather wallet with hand stitching.',
+//         },
+//       ],
+//     },
+//   ],
+//   pages: [
+//     { name: 'About', href: '#' },
+//     { name: 'Contact', href: '#' },
+//   ],
+// }
 
 const open = ref(false)
 </script>

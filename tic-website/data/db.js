@@ -349,6 +349,79 @@ export default {
           more: true,
           apply: false,
           image: "/img/industries/AGRI_RICE_0.jpg",
+          details: [
+            {
+              id: 1,
+              title: "",
+              text: `<p>The increase in production, processing, and trading practices have raised the demand for quality assurance and standardisation in grains and pulse products due to the large quantities consumed globally.</p>
+              <p>Food companies are increasingly paying attention to their corporate responsibilities and practices and has now become a pre-condition for the export of grains and pulses due to social and environmental impact of their businesses and before reaching consumers.</p>
+              <p>There is a growing need for food supply chain transparency and sustainable practices into their business policies. With such process in place, it ensures continued improvement in the quality of grains in the market and significantly contributes to good health and eventually reduce the prevalence of diseases associated with poor handling and storage of grains.</p>
+              `,
+              image: "",
+            },
+            {
+              id: 2,
+              title:
+                "Pre-Shipment Inspections / Loading and Discharge Supervision:",
+              text: `
+              <ul role="list">
+                <li>Loading and discharge supervision </li>
+                <li>Stock monitoring </li>
+                <li>Verification of cleanness of vessels and shore tanks</li>             
+                <li>Empty/full flexitanks weighing supervision </li>              
+                <li>Sealing of ships tank </li>             
+                <li>Sampling and analysis </li>              
+                <li>Photographic reporting</li>
+              </ul>
+              `,
+              image: "",
+            },
+            {
+              id: 3,
+              title: "Weighing and Sampling:",
+              text: `
+             
+              <ul role="list">
+                <li>Verification of scales </li>
+                <li>Gross weight, tare weight, and net weight determination</li>
+              </ul>
+              `,
+              image: "",
+            },
+            {
+              id: 4,
+              title: "Laboratory Testing:",
+              text: `
+             
+              <ul role="list">
+                <li>Complete physical testing </li>
+                <li>Chemical contamination and microbiological analysis</li>              
+                <li>Standard specific capabilities</li>             
+                <li>Grading</li>             
+                <li>GMO testing </li>             
+                <li>Pesticide residue and contamination analysis</li>
+              </ul>
+              `,
+              image: "",
+            },
+            {
+              id: 5,
+              title: "Inspected & Tested Products:",
+              text: `
+              <ul role="list">
+                <li>Wheat</li>
+                <li>Corn</li>             
+                <li>Barley</li>             
+                <li>Rice</li>             
+                <li>Sorghum</li>             
+                <li>Dry beams</li>              
+                <li>Lentils</li>             
+                <li>Chickpeas</li>
+              </ul>
+  `,
+              image: "",
+            },
+          ],
         },
         {
           id: 7,
@@ -360,6 +433,85 @@ export default {
           more: true,
           apply: false,
           image: "/img/industries/QC-Header.webp",
+          details: [
+            {
+              id: 1,
+              title: "",
+              text: `<p>Fruit and vegetables in supermarkets today must be of high quality to ensure adequate nutritional benefit and products remain fresh and edible. From the time of harvest to when they appear on the shelf, fruit and vegetable go through many different environments, they are highly perishable and susceptible to damage due to their high-water content they are delicate.</p>
+              <p>They can be affected by multiple factors and conditions in different facilities along with handling mode which can also influence the quality of what ends up on your folk. </p>
+              `,
+              image: "",
+            },
+            {
+              id: 2,
+              title: "",
+              text: `
+              <p><strong>Weather conditions</strong></p>
+              <p><strong>Pests, Diseases and Genetics</strong></p>
+              <p><strong>Handling and Storage Conditions</strong></p>             
+              <p><strong>Internal Changes, and Genetics</strong></p>
+              `,
+              image: "",
+            },
+            {
+              id: 3,
+              title:
+                "We provide you with a full visual and physical inspection including:",
+              text: `
+              <ul role="list">
+                <li>Size and Shape</li>
+                <li>Quality and Condition</li>
+                <li>Colour</li>
+                <li>Physical Damage and Foreign Object Contamination</li>
+                <li>Certification</li>
+                <li>Loss and Weight Control</li>
+                <li>Tally</li>
+                <li>Packaging Condition</li>
+                <li>Temperature Determination</li>
+                <li>Brix/ Acidity</li>
+              </ul>
+              <p>It is vital for fresh fruit and vegetable to be shipped quickly and stored under proper conditions to retain their quality and taste. Hence regular quality testing and ripening gas analysis is necessary at several stages of the supply chain to ensure your products maintain their quality and freshness and minimise any delays, rejections by retailers, or potential dangers as well as understanding their quality.</p>
+              `,
+              image: "",
+            },
+            {
+              id: 4,
+              title: "These services include:",
+              text: `
+              <ul role="list">
+                <li>Pre-production Inspection and Monitoring</li>
+                <li>Food Contact and Package Testing</li>
+                <li>Sampling Services</li>
+                <li>Pre-shipment Inspection</li>
+                <li>Loading Supervision/Discharging Supervision</li>
+                <li>Survey/Damage Survey</li>
+                <li>Tally Services</li>
+              </ul>
+              `,
+              image: "",
+            },
+            {
+              id: 4,
+              title: "Fresh Produce Factory Inspection Audits",
+              text: `
+              <p>Choosing the right factory who use the correct and efficient manufacturing and storage processes are essential as food products perish quickly. It is vital for industries to ensure standards in food hygiene and safety, storage capabilities and efficient supply chain.</p>
+              `,
+              image: "",
+            },
+            {
+              id: 4,
+              title: "Our Factory inspections include: ",
+              text: `
+              <ul role="list">
+                <li>Social Compliance Audits</li>
+                <li>Factory Technical Capability Audits</li>
+                <li>Food Hygiene Audits</li>
+                <li>Storage Audits</li>
+              </ul>
+              `,
+              image: "",
+            },
+          ],
         },
         {
           id: 8,
@@ -371,6 +523,34 @@ export default {
           more: true,
           apply: false,
           image: "/img/industries/maxresdefault.jpg",
+          details: [
+            {
+              id: 1,
+              title: "",
+              text: `
+              <p>Civil engineering is one of the oldest disciplines of engineering, it deals with the design, construction and maintenance of the physical and natural environment, which includes work such as road, buildings, bridges, canals and dams.</p>
+              <p>Civil Engineering plays a vital part in developing the infrastructure that makes our modern lives possible and safe. It takes the responsibly to ensure that the structures are built to last, can withstand environment and weather changes.</p>
+              <p>Non-Destructive Testing has an integral role in ensuring the maintenance of the structures that Engineers create. Materials such as wood, masonry units, concrete, fiber-cement and steel are subjected to tests for various reasons and at different times, e.g., during construction, but mainly during the service life.</p>
+              <p>Depending on the degree of their invasiveness, testing methods can be divided into destructive, semi-destructive and non-destructive methods. Non-destructive methods are mainly used to test strength and investigate its changes over time. </p>
+              `,
+              image: "",
+            },
+            {
+              id: 4,
+              title: "Applicable methods:",
+              text: `
+              <ul role="list">
+                <li>Infrared/Thermography testing for concrete walls & Electrical panels</li>
+                <li>Leak testing</li>
+                <li>Ultrasonic testing for steel pipes</li>
+                <li>Magnetic particle testing for steel pipes</li>
+                <li>Penetrant testing for steel pipes</li>
+                <li>Radiography testing</li>
+              </ul>
+              `,
+              image: "",
+            },
+          ],
         },
         {
           id: 9,
@@ -383,6 +563,30 @@ export default {
           apply: false,
           image:
             "/img/industries/Vessel Inspection & Audit Coordination Department.jpg",
+          details: [
+            {
+              id: 1,
+              title: "",
+              text: `
+                <p>With growing needs in all modern industries, the heavily regulated marine industry understand the importance on best operating practices and the need to maintain regular inspections for environmental compliance and growth, safety precautions, equipment standards as well as cost-efficient solutions.</p>
+                <p>With heavy scrutiny of the marine industry, strict compliances are in place where vessels must undergo regular inspections not only to lower operating expenses, reduce delay times but also to highlight the importance of health and safety and for the marine industry to take environmental responsibility as priority.</p>
+                <p>To proactively address such market needs, NDT inspections are used to carry out assessments of commercial vessels including bulk carriers, tankers, cruise liners, barges, ferries, and floating production storage and offloading units.</p>
+                <p><strong>Typical applications include, but are not limited to:</strong></p>
+                <ul role="list">
+                  <li>Ship and yacht floor inspection with Pulsed Eddy Currents (PEC)</li>
+                  <li>Corrosion measurement and mapping on ship hulls with Ultrasonic Testing (UT)</li>
+                  <li>Piping inspection with Long Range UT (LRUT)</li>
+                  <li>Weld inspection for surface cracking with Alternating Current Field Measurement (ACFM®)</li>
+                  <li>Marine HVAC: inspection of air conditioning systems onboard vessels with tube testing technologies</li>
+                  <li>Critical tank inspections on tanktainers for pitting corrosion with Eddy Current Array (ECA)</li>
+                  <li>Weld quality verification with bubble leak testing</li>
+                  <li>Critical components of marine propulsion systems and engines</li>
+                  <li>Structural integrity assessment of ship hulls with Remote Visual Inspection (RVI)</li>
+              </ul>
+                `,
+              image: "",
+            },
+          ],
         },
       ],
     },
@@ -390,6 +594,7 @@ export default {
       name: "Services",
       featured: [
         {
+          id: 1,
           title: "Non-Destructive Testing",
           subtitle: "",
           href: "/services/non-destructive",
@@ -398,8 +603,151 @@ export default {
           more: true,
           apply: false,
           image: "/img/services/NDT-testing-scaled-2560x1280.jpg",
+          details: [
+            {
+              id: 1,
+              title: "What is Non-Destructive Testing – NDT",
+              text: `
+                <p>Testing that is used to examine and evaluate the properties of materials, structures, and equipment without causing damage or increasing the risk of the integrity of the items being tested. </p>
+                `,
+              image: "",
+            },
+            {
+              id: 2,
+              title: "Why use Non-Destructive Testing - NDT",
+              text: `
+                <p>NDT plays a crucial role in everyday life for companies using pipelines, refineries, civil structures, oil and gas platforms, power stations, marine and many more.</p>
+                <p>NDT helps support and protect your investment made in infrastructure, by providing the valuable data needed to detect, monitor, and improve processes and assessments, as well as looking to extend the life of equipment.</p>
+                <p>The goal of NDT is to ensure that critical infrastructure is properly maintained in order to avoid catastrophic accidents and failures which can also have devastating impact and disruptions, where some companies may never recover. NDT also allows you to meet and comply with industry and government regulations and requirements.</p>
+                <p>In the event of undetected flaws and defects, repairs and replacements can be expensive and risk the safety and conditions of your company employees, general public and can result to a loss of revenue, and company reputation in the event of unplanned shutdown or delays due to equipment failure.</p>
+                `,
+              image: "",
+            },
+            {
+              id: 3,
+              title: "Which industries use Non-Destructive Testing – NDT ",
+              text: `
+                <p>There is a growing need for companies who are looking to make sure their products, materials and equipment achieve their design requirements and maximise expected life and improve reliability. There are also needs for stricter and increased regulations in place for regions and industries to assess everyday safety preventing accidents and manage assets and resources.</p>
+                `,
+              image: "",
+            },
+            {
+              id: 4,
+              title: "",
+              text: `
+                <h1 class='text-2xl font-semibold leading-6'>Conventional NDT Methods (CNDT)</h1>
+                `,
+              image: "",
+            },
+            {
+              id: 5,
+              title: "Ultrasonic Testing",
+              text: `
+                <p>Ultrasonic wave signal transmitted into a structure, which then detects defects by receiving and examining subsequent signals.Ultrasonic testing (UT) comprises a range of non-destructive testing (NDT) techniques that send ultrasonic waves through an object or material.</p>
+                <p>These high frequency sound waves are transmitted into materials to characterise the material or for flaw detecting. Most UT inspection applications use short pulse waves with frequencies ranging from 0.1-15 MHz, although frequencies up to 50 MHz can be used.</p>
+                <p>One common application for this test method is ultrasonic thickness measurement, which is used to ascertain the thickness of an object such as when assessing pipework corrosion. </p>
+                `,
+              image: "",
+            },
+            {
+              id: 6,
+              title: "Ultrasonic Bonding / Cladding Testing",
+              text: `
+                <p>Pulse-echo ultrasonic testing method for determining bond defects between the bearing metal and the backing. The measurement of bond between the babbitt and the backing metal of the sample bearings shall be determined using ultrasonic methods.</p>
+                <p>The ultrasonic signal reflected by the bond interface between the bearing metal and the backing is used to determine bonding defects.</p>
+                `,
+              image: "",
+            },
+            {
+              id: 7,
+              title: "Ultrasonic Thickness Measurement",
+              text: `
+                <p>Fast, reliable, and versatile use of non-destructive testing technique for measuring the thickness of a material from one side. This method is commonly used to wide range of structures and components including ship hull, pressure vessels, piping, and structural steels.</p>
+                `,
+              image: "",
+            },
+            {
+              id: 8,
+              title: "Magnetic Particle Testing",
+              text: `
+                <p>Magnetic Particle Testing uses one or more magnetic fields to locate surface and near-surface discontinuities in ferromagnetic materials.</p>
+                `,
+              image: "",
+            },
+            {
+              id: 9,
+              title: "Liquid Penetrant Testing",
+              text: `
+                <p>Liquid penetrant drawn surface-breaking crack by capillary action and excess surface penetrant is then removed, developer applied to surface, to draw out the penetrant in the crack and produce a surface indication.</p>
+                `,
+              image: "",
+            },
+            {
+              id: 10,
+              title: "Radiographic Testing",
+              text: `
+                <p>Industrial radiography involves exposing a test object to penetrating radiation so that the radiation passes through the object being inspected and a recording medium placed against the opposite side of that object.</p>
+                `,
+              image: "",
+            },
+            {
+              id: 11,
+              title: "Infrared Thermography",
+              text: `
+                <p>A tool used for proactive troubleshooting and predictive maintenance. Thermographic inspection can detect problems in motor control centers, electrical panels, switchgear cabinets, transformer bushings and terminations, and equipment control panels. </p>
+                <p>It is vital for companies to conduct regular checks to avoid electrical fires and mechanical breakdowns resulting to significant business interruption.</p>
+                `,
+              image: "",
+            },
+            {
+              id: 12,
+              title: "",
+              text: `
+                <h1 class='text-2xl font-semibold leading-6'>Advance NDT Methods – (ANDT)</h1>
+                `,
+              image: "",
+            },
+            {
+              id: 13,
+              title: "Phased Array Ultrasonic Testing",
+              text: `
+                <p>Phased Array Ultrasonic Testing (PAUT) is a focused inspection technique designed to incorporate beam technology to detect complex geometries & sizing defects.</p>
+                <p>Phased Array Ultrasonic Testing (PAUT), also known as phased array UT, is an advanced non-destructive inspection technique that uses a set of ultrasonic testing (UT) probes made up of numerous small elements. </p>
+                <p>Each of these is pulsed individually with computer-calculated timing to create the phased aspect of the process, while the array refers to the multiple elements that make up a PAUT system.</p>
+                <p>The beam from a phased array probe can be focused and electronically swept across an inspection piece without moving the probe itself. This differs from single element probes (also known as monolithic probes). These more conventional probes need to be physically moved or turned to cover larger areas, which is not required for PAUT.</p>
+                `,
+              image: "",
+            },
+            {
+              id: 14,
+              title: "Eddy Current Testing",
+              text: `
+                <pUses the principle of electromagnetic induction to detect and identify flaws or differentiate in conductive materials. An excitation coil carrying current is placed in proximity to the component to be inspected.</p>
+                <p>The electrical conductivity variations, the magnetic permeability of the test-part, or the presence of any discontinuities, will cause a change in the eddy current and a corresponding change in phases and amplitude of the measured current. The changes are shown on a screen and are interpreted to identify defects.</p>
+                `,
+              image: "",
+            },
+            {
+              id: 15,
+              title: "Magnetic Flux Leakage",
+              text: `
+                <pMagnetic flux leakage is a magnetic method used to detect corrosion and pitting in steel structures, most commonly pipelines and storage tanks. The basic principle is that a powerful magnet is used to magnetize the steel.</p>
+                <p>At areas where there is corrosion or missing metal, the magnetic field "leaks" from the steel. In an MFL (or Magnetic Flux Leakage) tool, a magnetic detector is placed between the poles of the magnet to detect the leakage field.</p>
+                `,
+              image: "",
+            },
+            {
+              id: 16,
+              title: "Time of Flight Diffraction – (TOFD)",
+              text: `
+                <p>TOFD uses the time of flight of an ultrasonic pulse to find the location of a reflector. It can also be used for weld overlays and the heat affected zones of other components as well such as piping, pressure vessels, clad material, storage tanks, and structural steel.</p>
+                `,
+              image: "",
+            },
+          ],
         },
         {
+          id: 2,
           title: "Calibration Services",
           subtitle: "",
           href: "/services/calibration-services",
@@ -408,8 +756,79 @@ export default {
           more: true,
           apply: false,
           image: "/img/services/calibration-services.png",
+          details: [
+            {
+              id: 1,
+              title: "What is Calibration?",
+              text: `
+                <p>Calibration is quite simply a service aimed at detecting the uncertainty and inaccuracy of a measuring instrument or piece of equipment. During the calibration testing, the device under test is compared to a reference of known value and parameters to determine the deviation of the measurement from the true value. The equipment used as a reference should itself be directly traceable to equipment that is calibrated. </p>
+                `,
+              image: "",
+            },
+            {
+              id: 2,
+              title: "Why are Calibration services important?",
+              text: `
+                <p>Calibration is critically important when measurements are important, they simply work hand in hand, the cost of calibration to your equipment as an investment and the potential result of an incorrect reading is a cost at the result of not making the investment.</p>
+                <p>Calibration allows users and businesses to have confidence in the results that they record, monitor, and subsequently control. Factors such as frequent usage, environment, man handling can increase measurement error and uncertainties, meaning instrument and equipment’s must be subject to regular calibrations.</p>
+                <p>Reliable measurements and equipment allow engineers to minimise the assignable causes of variation by prevention and early detection. When such operating conditions and parameters are left uncontrolled in a factory or site, it can endanger the people and the environment within its surroundings.</p>
+                <p>Lastly, calibration services keep a consistency of all measurements performed and keeps all measuring instruments and equipment’s up to date with international agreements and standards.</p>
+                `,
+              image: "",
+            },
+            {
+              id: 3,
+              title: "How often to Calibrate? ",
+              text: `
+                <p>For most industries, the standard calibration of measuring instruments and equipment’s are done on an annual basis. Once you gain results from calibration tests you can adjust the frequency of calibrations, upgrade of equipment’s to more robust instruments if required.</p>
+                <p>Most calibration laboratories supply a printed calibration certificate for the customer to retain as proof of quality standards which can be presented to clients.</p>
+                `,
+              image: "",
+            },
+            {
+              id: 4,
+              title: "Our Calibration Laboratory Capabilities",
+              text: `
+              <ul role="list">
+                <li>Electrical Calibration</li>
+                <li>Linear</li>
+                <li>Temperature Measuring Devices</li>
+                <li>Mechanical Calibration</li>
+                <li>Pressure Calibration</li>
+                <li>Gas Analysis</li>
+                <li>Humidity Indicators</li>
+                <li>On-Site Calibration</li>
+                <li>Flowmeters</li>
+                <li>Weight</li>
+                <li>Volume</li>
+                <li>Balance</li>
+              </ul>
+              `,
+              image: "",
+            },
+            {
+              id: 5,
+              title: "Applicable Industries for Calibration Services",
+              text: `
+              <ul role="list">
+                <li>Oil & Gas, Chemical Refineries</li>
+                <li>Power Plants</li>
+                <li>Offshore Oil Rigs </li>
+                <li>Marine </li>
+                <li>Automobile</li>
+                <li>Electricals</li>
+                <li>Manufacturing</li>
+                <li>Aerospace</li>
+                <li>Civil</li>
+              
+              </ul>
+              `,
+              image: "",
+            },
+          ],
         },
         {
+          id: 3,
           title: "Corrosion",
           subtitle: "",
           href: "/services/corrosion",
@@ -420,6 +839,7 @@ export default {
           image: "/img/services/corrosion-control-pipe-thread-cleaning.webp",
         },
         {
+          id: 4,
           title: "Steel Manufacturing and Fabrication",
           subtitle: "",
           href: "/services/steel-manufactoring",
@@ -431,6 +851,7 @@ export default {
             "/img/services/the-impact-of-lean-manufacturing-on-structural-steel-fabricating-1.jpg",
         },
         {
+          id: 5,
           title: "Laboratory Testing Services",
           subtitle: "",
           href: "/services/laboratory-testing-and-services",
@@ -443,6 +864,8 @@ export default {
       ],
     },
   ],
-  industries: [],
-  services: [],
+  pages: [
+    { name: "About", href: "#" },
+    { name: "Contact", href: "#" },
+  ],
 };

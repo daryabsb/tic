@@ -3,7 +3,7 @@
         <div class="fixed z-50 w-full">
             <slot name="nav" :navigate="navigate" :currentSlideNumber="currentSlideNumber" />
         </div>
-        <div class="container absolute pt-12">
+        <div class="">
             <slot name="sections" />
         </div>
     </div>

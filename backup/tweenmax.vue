@@ -98,7 +98,3 @@ onMounted(async () => {
 // https://codepen.io/bcarvalho/pen/gWPvJB
 
 </script>
-
-<style lang="scss">
-body {}
-</style>

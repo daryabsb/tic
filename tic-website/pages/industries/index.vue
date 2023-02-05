@@ -88,9 +88,3 @@ console.log(wpcf7);
 const industries = ref(data.categories[0])
 
 </script>
-
-<style>
-/* @import url('https://golin.com/wp-content/themes/golin/style.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css?ver=6.1.1');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.css?ver=6.1.1'); */
-</style>

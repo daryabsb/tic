@@ -1970,6 +1970,13 @@
     "domhandler" "^4.2.0"
     "entities" "^2.0.0"
 
+"dom7@^4.0.4":
+  "integrity" "sha512-emjdpPLhpNubapLFdjNL9tP06Sr+GZkrIHEXLWvOGsytACUrkbeIdjO5g77m00BrHTznnlcNqgmn7pCN192TBA=="
+  "resolved" "https://registry.npmjs.org/dom7/-/dom7-4.0.6.tgz"
+  "version" "4.0.6"
+  dependencies:
+    "ssr-window" "^4.0.0"
+
 "domelementtype@^2.0.1", "domelementtype@^2.2.0":
   "integrity" "sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw=="
   "resolved" "https://registry.npmjs.org/domelementtype/-/domelementtype-2.3.0.tgz"
@@ -3627,6 +3634,14 @@
     "@nuxt/kit" "^3.0.0"
     "pathe" "^1.0.0"
 
+"nuxt-swiper@^0.1.9":
+  "integrity" "sha512-RScozYZQb0kYiCNJF6y9ol/q/ugtN3u3GsZdC0aN2gLL4uLqJ/iIKtw5wQaeMcgrSLRzY1SRO26kpKVkkWtGVg=="
+  "resolved" "https://registry.npmjs.org/nuxt-swiper/-/nuxt-swiper-0.1.9.tgz"
+  "version" "0.1.9"
+  dependencies:
+    "@nuxt/kit" "^3.0.0"
+    "swiper" "^8.4.5"
+
 "nuxt@3.0.0":
   "integrity" "sha512-RNlD78uv04ZiXWmlx9f1tnJfrqsYAWHU+4gbgOTQpIBmQzHWPWiox+fm/1m93iKfEd5sJi9TJUoXX5yBObVZYw=="
   "resolved" "https://registry.npmjs.org/nuxt/-/nuxt-3.0.0.tgz"
@@ -4733,6 +4748,11 @@
   "resolved" "https://registry.npmjs.org/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz"
   "version" "1.4.8"
 
+"ssr-window@^4.0.0", "ssr-window@^4.0.2":
+  "integrity" "sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ=="
+  "resolved" "https://registry.npmjs.org/ssr-window/-/ssr-window-4.0.2.tgz"
+  "version" "4.0.2"
+
 "stable@^0.1.8":
   "integrity" "sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w=="
   "resolved" "https://registry.npmjs.org/stable/-/stable-0.1.8.tgz"
@@ -4881,6 +4901,14 @@
     "csso" "^4.2.0"
     "picocolors" "^1.0.0"
     "stable" "^0.1.8"
+
+"swiper@^8.4.5":
+  "integrity" "sha512-VwO/KU3i9IV2Sf+W2NqyzwWob4yX9Qdedq6vBtS0rFqJ6Fa5iLUJwxQkuD4I38w0WDJwmFl8ojkdcRFPHWD+2g=="
+  "resolved" "https://registry.npmjs.org/swiper/-/swiper-8.4.7.tgz"
+  "version" "8.4.7"
+  dependencies:
+    "dom7" "^4.0.4"
+    "ssr-window" "^4.0.2"
 
 "tailwind-config-viewer@^1.6.2", "tailwind-config-viewer@^1.7.2":
   "integrity" "sha512-3JJCeAAlvG+i/EBj+tQb0x4weo30QjdSAo4hlcnVbtD+CkpzHi/UwU9InbPMcYH+ESActoa2kCyjpLEyjEkn0Q=="

@@ -1,5 +1,12 @@
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "nuxt-headlessui"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-headlessui", "nuxt-swiper"],
+  swiper: {
+    // Swiper options
+    //----------------------
+    // prefix: 'Swiper',
+    // styleLang: 'css',
+    // modules: ['navigation', 'pagination'], // all modules are imported by default
+  },
   headlessui: {
     prefix: "Headless",
   },
@@ -20,7 +27,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ["~/assets/css/main.css", "~/assets/css/tweenmax.css"],
+  css: ["~/assets/css/main.css"],
   plugins: [{ src: "~/plugins/aos", mode: "client" }],
   srcDir: "./",
   build: {

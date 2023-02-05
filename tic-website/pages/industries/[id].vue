@@ -13,7 +13,7 @@ module.exports = {
 ```
 -->
 <template>
-    <div class="bg-white relative">
+    <div class="bg-white relative w-full">
         <div class="fixed z-50 w-full">
 
 
