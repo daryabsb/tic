@@ -38,10 +38,8 @@
     </div>
 </template>
 <script setup>
-import db from "~/data/db"
-var wpcf7 = { "api": { "root": "https:\/\/golin.com\/wp-json\/", "namespace": "contact-form-7\/v1" } };
-
-const services = ref(db.categories[1])
+const categories = await $fetch('/api/data')
+const services = ref(categories.api.categories[1])
 
 </script>
 

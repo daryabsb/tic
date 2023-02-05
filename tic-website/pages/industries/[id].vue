@@ -81,12 +81,11 @@ module.exports = {
 </template>
 
 <script setup>
-import data from "~/data/db"
 import { CameraIcon } from '@heroicons/vue/20/solid'
-
+const categories = await $fetch('/api/data')
+const industries = ref(categories.api.categories[0])
 const routes = useRoute()
 const id = routes.params.id
-const industries = ref(data.categories[0])
 
 const industry = industries.value.featured.find(i => i.id == id)
 

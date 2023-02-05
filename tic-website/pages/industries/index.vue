@@ -82,9 +82,9 @@
     </div>
 </template>
 <script setup>
-import data from "~/data/db"
-var wpcf7 = { "api": { "root": "https:\/\/golin.com\/wp-json\/", "namespace": "contact-form-7\/v1" } };
-console.log(wpcf7);
-const industries = ref(data.categories[0])
+// import data from "~/data/db"
+const categories = await $fetch('/api/data')
+// var wpcf7 = { "api": { "root": "https:\/\/golin.com\/wp-json\/", "namespace": "contact-form-7\/v1" } };
+const industries = ref(categories.api.categories[0])
 
 </script>
