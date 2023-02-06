@@ -24,11 +24,11 @@ import { defineComponent, h } from 'vue'
 
 const navigation = {
     main: [
-        { name: 'About', href: '#' },
-        { name: 'Blog', href: '#' },
-        { name: 'Jobs', href: '#' },
-        { name: 'Press', href: '#' },
-        { name: 'Accessibility', href: '#' },
+        { name: 'Industries', href: '/industries' },
+        { name: 'Services', href: '/services' },
+        { name: 'About', href: '/about' },
+        { name: 'Contact', href: '/contact' },
+        { name: 'FAQ', href: '/faq' },
         { name: 'Partners', href: '#' },
     ],
     social: [

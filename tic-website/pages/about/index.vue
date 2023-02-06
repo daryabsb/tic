@@ -39,6 +39,7 @@
         <section class="relative z-10 mx-auto max-w-7xl px-6 pb-32 lg:px-8" aria-labelledby="contact-heading">
             <AboutTeam />
         </section>
+        <HeadersFooter />
     </div>
 </template>
 
@@ -48,7 +49,6 @@ import { LifebuoyIcon, NewspaperIcon, PhoneIcon } from '@heroicons/vue/24/outlin
 const data = await $fetch('/api/data')
 const company = ref(data.api.about.company)
 const values = ref(data.api.about.values)
-console.log(company);
 
 const supportLinks = [
     {
