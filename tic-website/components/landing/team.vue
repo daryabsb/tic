@@ -42,7 +42,7 @@
                             focus:ring-2 focus:ring-indigo-500 
                             focus:ring-offset-2 sm:mt-0 sm:inline-flex 
                             w-fit sm:flex-shrink-0 sm:items-center">
-                            Notify me
+                            Send me free quotation
                         </button>
                     </form>
                 </div>
@@ -52,14 +52,16 @@
                 <div class="block lg:hidden relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
                     <button type="button"
                         class="relative block w-full overflow-hidden rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                        <span class="sr-only">Watch our video to learn more</span>
-                        <img class="w-full" src="/img/section-img-02.jpg" alt="" />
+                        <div class="abolute inset-0 bg-zinc-900 bg-opacity-20 z-10" />
+
+                        <img class="w-full overlay" src="/img/sectionteam.jpg" alt="" />
+
                     </button>
                 </div>
             </div>
         </div>
         <div class="hidden lg:block absolute top-0">
-            <img src="/img/section-img-02.jpg" alt="" class="h-screen w-screen object-cover" />
+            <img src="/img/sectionteam.jpg" alt="" class="h-screen w-screen object-cover" />
         </div>
     </slide>
 </template>

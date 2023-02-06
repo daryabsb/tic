@@ -5,16 +5,16 @@
             <div class=" py-24 px-8  lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-16">
 
                 <div class="relative lg:col-span-1">
-                    <img class="h-24  mx-auto w-auto" src="~/assets/logo/tic-logo-01.svg" alt="" />
+                    <img class="h-24  mr-auto w-auto" src="~/assets/logo/tic-logo-01.svg" alt="" />
                     <blockquote class=" drop-shadow mt-6 font-semibold text-zinc-900">
-                        <p class="text-xl capitalize font-medium sm:text-2xl">This app has completely transformed
+                        <p class="text-xl capitalize font-medium sm:text-2xl">This company has completely transformed
                             how we
                             interact with customers. We've seen record bookings, higher customer satisfaction, and
                             reduced churn.</p>
                         <footer class="mt-6">
                             <p class="flex flex-col text-blood font-medium">
-                                <span class="">Marie Chilvers</span>
-                                <span>CEO, Workcation</span>
+                                <span class="">Rand Khalifa</span>
+                                <span>CEO, Tic Quality Control</span>
                             </p>
                         </footer>
                     </blockquote>

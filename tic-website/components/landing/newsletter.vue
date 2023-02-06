@@ -1,32 +1,72 @@
 <template>
-    <slide class=" -mt-12">
-        <p class="content-title">Etiam consequat lectus.</p>
-        <p class="content-subtitle">
-            Nullam tristique urna sed tellus ornare congue. Etiam vitae erat at
-            nibh aliquam dapibus.
-        </p>
-        <footer class="bg-white absolute bottom-8 w-full border-t border-zinc-500 ">
-            <div class="mx-auto max-w-7xl py-6 px-6 md:flex md:items-start md:justify-between lg:px-8">
-                <div class="flex items-start justify-center space-x-6 md:order-2">
-                    <a v-for="item in navigation" :key="item.name" :href="item.href"
-                        class="text-gray-400 hover:text-gray-500">
-                        <span class="sr-only">{{ item.name }}</span>
-                        <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
-                    </a>
-                </div>
-                <div class="mt-8 md:order-1 md:mt-0">
-                    <p class="text-center text-xs leading-5 text-gray-500">
-                        &copy; 2023 Darya Ibrahim, Inc. All rights reserved.
-                    </p>
+    <ParalaxSlide>
+        <div class="relative h-full pt-8">
+            <div class="mx-auto max-w-7xl py-12 px-6 lg:px-8 lg:py-24">
+                <div class="h-full space-y-12">
+                    <div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
+                        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">ISO</h2>
+                        <p class="text-xl text-gray-500">Odio nisi, lectus dis nulla. Ultrices maecenas vitae rutrum
+                            dolor
+                            ultricies donec risus sodales. Tempus quis et.</p>
+                    </div>
+                    <ul role="list"
+                        class="space-y-12 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-4 lg:gap-x-8">
+                        <li v-for="iso in isos" :key="iso.name">
+                            <div class="space-y-4">
+                                <div class="min-h-full aspect-w-1.2 aspect-h-2 shadow-md border border-blood">
+                                    <img class="rounded-lg object-cover shadow-lg" :src="iso.image" alt="" />
+                                </div>
+
+                                <div class="space-y-2">
+                                    <div class="space-y-1 text-lg font-medium leading-6">
+                                        <h3>{{ iso.name }}</h3>
+                                        <p class="text-blood">{{ iso.role }}</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </footer>
-    </slide>
+            <HeadersFooter class="absolute bottom-0 w-full" />
+
+        </div>
+    </ParalaxSlide>
 </template>
 
 <script setup>
 import slide from '~/components/Paralax/slide.vue';
-
+const isos = [
+    {
+        name: 'EIACI',
+        role: 'ISO for Quanlity Services',
+        image:
+            '/img/iso/iso-01.jpg',
+    },
+    {
+        name: 'EIACI',
+        role: 'ISO for Quanlity Services',
+        image:
+            '/img/iso/iso-02.jpg',
+    },
+    {
+        name: 'EIACI',
+        role: 'ISO for Quanlity Services',
+        image:
+            '/img/iso/iso-03.jpg',
+    },
+    // 
+    {
+        name: 'EIACI',
+        role: 'ISO for Quanlity Services',
+        image:
+            '/img/iso/iso-04.jpg',
+    },
+    // 
+    // 
+    // More people...
+]
 
 const navigation = [
     {

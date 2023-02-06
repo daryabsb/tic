@@ -16,13 +16,12 @@
                 </p>
                 <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
                     <div class="rounded-md shadow">
-                        <a href="#"
+                        <a href="/industries/2"
                             class="flex w-full items-center justify-center rounded-md border border-transparent bg-blood px-8 py-3 text-base font-medium text-white hover:bg-blood md:py-4 md:px-10 md:text-lg">
-                            Get
-                            started</a>
+                            Read more</a>
                     </div>
                     <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                        <a href="#"
+                        <a href="/services"
                             class="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-blood hover:bg-gray-50 md:py-4 md:px-10 md:text-lg">
                             Services</a>
                     </div>

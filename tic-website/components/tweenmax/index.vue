@@ -16,7 +16,7 @@
                                         {{ slide.description }}
                                     </p>
                                     <div class="mt-8 flex gap-x-4 justify-center">
-                                        <a ref="btn" href="#" class="btn">
+                                        <a ref="btn" :href="slide.href" class="btn">
                                             <span ref="btnInner" class="btn-inner">Learn More</span>
                                         </a>
                                     </div>

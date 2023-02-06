@@ -7,12 +7,13 @@
                         <div
                             class="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-zinc-900/10 hover:ring-zinc-900/20">
                             <span class="text-gray-600 capitalize text-xl">Who is TIC Quality Control?
-                                <a href="#" class="font-semibold text-blood"><span class="absolute inset-0"
+                                <a href="/about" class="font-semibold text-blood"><span class="absolute inset-0"
                                         aria-hidden="true"></span>Read more <span aria-hidden="true">→</span></a></span>
                         </div>
                     </div>
                     <div>
-                        <h1 class="content-title capitalize text-4xl leading-1 tracking-tight sm:text-center sm:text-8xl">
+                        <h1
+                            class="content-title capitalize text-4xl leading-1 tracking-tight sm:text-center sm:text-8xl">
                             consulting services and quality solutions
                         </h1>
                         <p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
@@ -20,9 +21,9 @@
                             throughout your supply chain.
                         </p>
                         <div class="mt-8 flex gap-x-4 justify-center">
-                            <a href="#"
+                            <a href="/industries"
                                 class="inline-block rounded-lg bg-blood px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-blood hover:bg-blood hover:ring-blood">Industries
-                                <span class="text-indigo-200" aria-hidden="true">→</span></a><a href="#"
+                                <span class="text-indigo-200" aria-hidden="true">→</span></a><a href="/services"
                                 class="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20">Services
                                 <span class="text-gray-400" aria-hidden="true">→</span></a>
                         </div>
