@@ -26,30 +26,35 @@
                             <h2
                                 class="text-2xl font-thin tracking-tight font-montserrat text-blood uppercase sm:text-3xl">
                                 Global
-                                representation
+                                presence
                             </h2>
+
                             <p class="mt-3 text-lg leading-6 text-gray-500">Nullam risus blandit ac aliquam justo ipsum.
                                 Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.</p>
+
                             <dl class="mt-8 text-base text-gray-500">
+                                <p class="text-lg font-montserrat text-blood">
+                                    Dubai Office
+                                </p>
                                 <div>
                                     <dt class="sr-only">Postal address</dt>
                                     <dd>
-                                        <p>742 Evergreen Terrace</p>
-                                        <p>Springfield, OR 12345</p>
+                                        <p>Office 1304, Fairmont Dubai</p>
+                                        <p>Shaikh Zayed Road, Dubai UAE</p>
                                     </dd>
                                 </div>
                                 <div class="mt-6">
                                     <dt class="sr-only">Phone number</dt>
                                     <dd class="flex">
                                         <PhoneIcon class="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
-                                        <span class="ml-3">+1 (555) 123-4567</span>
+                                        <span class="ml-3">+71 (04) 225-5555</span>
                                     </dd>
                                 </div>
                                 <div class="mt-3">
                                     <dt class="sr-only">Email</dt>
                                     <dd class="flex">
                                         <EnvelopeIcon class="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
-                                        <span class="ml-3">support@example.com</span>
+                                        <span class="ml-3">info@ticqc.ae</span>
                                     </dd>
                                 </div>
                             </dl>
