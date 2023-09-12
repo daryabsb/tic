@@ -26,6 +26,8 @@
   "dependencies": {
     "aos": "^2.3.4",
     "gsap": "^3.11.4",
-    "nuxt-swiper": "^0.1.9"
+    "npm": "^10.1.0",
+    "nuxt-swiper": "^0.1.9",
+    "pnpm": "^8.7.5"
   }
 }
